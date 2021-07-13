@@ -1,0 +1,79 @@
+body{
+    background: radial-gradient(#ffff);
+    
+}
+
+.card{
+    width: 19rem;
+   position: absolute;
+}
+
+.card .text-center{
+    border-radius: 20px;
+    
+    
+}
+
+.card-title{
+  
+    text-align: left 50px;
+    position: relative;
+    margin-top: 5%;
+}
+
+.card:hover{
+    box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253)!important;
+}
+
+.card-body{
+    padding: 3rem  !important;
+    border-radius: 6rem;
+   
+    
+    
+}
+
+.card-bed{
+    font-size: 1.0rem;
+    padding: 0.4rem ;
+    margin-top: -50%;
+    text-align: left;
+
+
+}
+
+.card-text{
+    font-size: 0.9rem;
+    padding: 0.4rem ;
+    margin-top: -10%;
+    text-align: left;
+    
+   
+}
+.card-text2{
+    font-size: 0.9rem;
+    padding: 0.4rem ;
+    margin-top: -35%;
+    text-align: left;
+   
+
+}
+.card-text3{
+    font-size: 0.9rem;
+    padding: 0.4rem ;
+    margin-top: -35%;
+    text-align: left;
+ 
+}
+.container-fluid .row{
+    padding-top: 4rem;
+    
+   
+   
+}
+.row{
+    padding-top: 1rem;
+    margin-left: 5%;
+    margin-right: 80%;
+}
+
