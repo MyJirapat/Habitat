@@ -14,9 +14,13 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import NavLink from "../../Components/NavLink/NavLink";
-import Button from "@material-ui/core/Button";
-import Social from "../../Components/Anouncement/Socialcard";
+//import Table from "../Component/Table";
+
+
+import Simplecard from "../../Components/Expens/Simplecard";
+import Tab from "./Tab";
+import Tabs from "./Tabs";
+
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
@@ -87,7 +91,6 @@ export default function MiniDrawer() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -159,13 +162,118 @@ export default function MiniDrawer() {
         </NavLink>
         </List>
       </Drawer>
-      <main className={classes.content}>    
-        <div className={classes.toolbar}/>       
+      <main className={classes.content}>
+        <div className={classes.toolbar} />
         <Typography paragraph>
         </Typography>
-        
-              <Social/>
+        <Typography paragraph>
+      <Tabs/>
+
+      <div className="container">
+       
+            <div className="row">
+                  <div className="col">
+                        <Simplecard 
+
+                        Text="Floor 1"
+                        room1="101"
+                        status1="Inhabitat"
+                        PreviousDate1="27/04/2021"
+                        previousReading1= "3,962"
+                        curentReading1="Empty"
+                        usage1="96"
+
+                        room2="102"
+                        status2="habitat"
+                        PreviousDate2="27/04/2021"
+                        previousReading2= "3,962"
+                        curentReading2="Empty"
+                        usage2="96"
+
+                        room3="103"
+                        status3="Inhabitat"
+                        PreviousDate3="27/04/2021"
+                        previousReading3= "3,962"
+                        curentReading3="Empty"
+                        usage3="96"
+
+                        room4="104"
+                        status4="Inhabitat"
+                        PreviousDate4="27/04/2021"
+                        previousReading4= "3,962"
+                        curentReading4="Empty"
+                        usage4="96"
+
+
+                        room5="104"
+                        status5="Inhabitat"
+                        PreviousDate5="27/04/2021"
+                        previousReading5= "3,962"
+                        curentReading5="Empty"
+                        usage5="96"
+                        />
+                         
+                  </div>
+            </div>
+
+            <div className="row">
+                  <div className="col">
+                        <Simplecard 
+                        Text="Floor 2"
+
+                        room1="201"
+                        status1="Inhabitat"
+                        PreviousDate1="27/04/2021"
+                        previousReading1= "3,962"
+                        curentReading1="Empty"
+                        usage1="96"
+
+                        room2="202"
+                        status2="habitat"
+                        PreviousDate2="27/04/2021"
+                        previousReading2= "3,962"
+                        curentReading2="Empty"
+                        usage2="96"
+
+                        room3="203"
+                        status3="Inhabitat"
+                        PreviousDate3="27/04/2021"
+                        previousReading3= "3,962"
+                        curentReading3="Empty"
+                        usage3="96"
+
+                        room4="204"
+                        status4="Inhabitat"
+                        PreviousDate4="27/04/2021"
+                        previousReading4= "3,962"
+                        curentReading4="Empty"
+                        usage4="96"
+
+
+                        room5="205"
+                        status5="Inhabitat"
+                        PreviousDate5="27/04/2021"
+                        previousReading5= "3,962"
+                        curentReading5="Empty"
+                        usage5="96"
+                        />      
+
+                  </div>
+                  
+                 
+            </div>
+
+
+
+
+
+            
+
+      </div>     
+        </Typography>            
       </main>
     </div>
   );
 }
+
+

@@ -19,7 +19,7 @@ import General from "../../Components/Anouncement/General";
 import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
 
-import "../../Css/Anouce.css";
+import "../../Css/Announcement/Anouce.css";
 import { Grid } from '@material-ui/core';
 
 
@@ -208,8 +208,6 @@ return (
 
 </div>
 
-
-
         <div className="row">                
            <div className="col-md">           
              <div className="AppBack">                    
@@ -237,15 +235,9 @@ return (
                   <h3 >General News</h3>    
                   <Divider variant="middle"/>                
                  </Typography>                                      
-                   {filteredData.map((value,index)=>(
-                   <General
-                        //key={index} 
-                        name={value.tite}
-                        //cell={value.description}
-                        //img={value.image}
-                        //ID ={index.id}             
-                        />
-                         ))}                                        
+             
+                   <General/>
+                                                                              
                  </div>                   
             </div>                
         </div>

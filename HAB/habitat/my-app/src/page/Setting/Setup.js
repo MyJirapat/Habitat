@@ -15,13 +15,18 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import NavLink from "../../Components/NavLink/NavLink";
-import Button from "@material-ui/core/Button";
-import Social from "../../Components/Anouncement/Socialcard";
+import Setting from "../../Components/Setting/Setting";
+import '../../Css/Setup/Setup.css';
+
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',    
+  },
+  heder:{
+    display: 'flex',
+    
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -81,6 +86,15 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
+  Head:{
+    textAlign: 'center',
+    marginTop: '-5%',
+
+  },
+  Btn:{
+    marginleft: '5%',
+
+  }
 }));
 
 export default function MiniDrawer() {
@@ -140,7 +154,6 @@ export default function MiniDrawer() {
           </IconButton>
         </div>
         <Divider/>
-
         <List>
         <NavLink to="/login" icon={InboxIcon}>
           Room management
@@ -159,13 +172,45 @@ export default function MiniDrawer() {
         </NavLink>
         </List>
       </Drawer>
-      <main className={classes.content}>    
-        <div className={classes.toolbar}/>       
-        <Typography paragraph>
-        </Typography>
+      <main className={classes.content}>
+        <div className={classes.toolbar} />
         
-              <Social/>
+        <Typography paragraph>
+          
+          <div className="col"> 
+         
+                  </div>
+        </Typography>
+        <Typography paragraph>
+        <div className="SetupBackground2" >  
+        <div className="container">
+        
+                <div className="row">     
+                    <div className="col-xs">
+                    < Setting/>      
+                    </div>
+                  <div className="col-md-6">    
+                     
+                  </div>         
+                  <div className="col-md-6">                             
+                  </div>                         
+        </div>
+        </div>
+        </div>      
+        </Typography>            
       </main>
     </div>
+    
   );
 }
+
+
+/*SetupBackground*/
+
+
+/*<React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="sm">
+        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} />
+      </Container>
+    </React.Fragment>*/
