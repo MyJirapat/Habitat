@@ -18,8 +18,10 @@ import Typography from '@material-ui/core/Typography';
 import General from "../../Components/Anouncement/General";
 import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
+import Details from '../../Components/Anouncement/Detail';
+import Comment from '../../Components/Anouncement/Comment';
 
-import "../../Css/Announcement/Anouce.css";
+//import "../../Css/Announcement/Anouce.css";
 import { Grid } from '@material-ui/core';
 
 
@@ -205,18 +207,19 @@ return (
         </DialogActions>
       </Dialog>
 </div>
+
 </div>
 
         <div className="row">                
            <div className="col-md">           
-             <div className="AppBack">                    
+                               
                 <div className="cards-container">
                  <Typography gutterBottom variant="h5" component="h1">    
-                  <h3>Important News</h3>    
+                  <h3>Announcement</h3>    
                   <Divider variant="middle"/>
                  </Typography>                       
                     {filteredData.map((value,index)=>(                 
-                    <ImpNews
+                    <Details
                         key={index} 
                         Name={value.tite}
                         img={value.image}
@@ -228,20 +231,20 @@ return (
              </div>
              
             <div className="col-md">
-              <div className="AppBack2"> 
+              
                 <div className="cards-container">  
                   <Typography gutterBottom variant="h5" component="h1">    
-                  <h3 >General News</h3>    
+                  <h3 >Comment</h3>    
                   <Divider variant="middle"/>                
                  </Typography>                                      
              
-                   <General/>
+                   <Comment/>
                                                                               
                  </div>                   
             </div>                
         </div>
-    </div>
-</div>
+   
+
 );
 }
 
@@ -260,55 +263,3 @@ export default Social;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/*<div className="row">                
-                    <div className="col-md">           
-                    <div className="AppBack">                    
-                    <div className="cards-container">
-                    <Typography gutterBottom variant="h4" component="h1">    
-                    <h3>Important News</h3>    
-                    <Divider variant="middle"/>
-                   
-                    </Typography>                       
-                        {filteredData.map((value,index)=>(                 
-                    <ImpNews
-                        key={index} 
-                        Name={value.tite}
-                        img={value.image}
-                        //cell={value.description}
-                        ID ={value.id}/>
-                         ))}                
-                    </div>                
-                </div>                    
-             </div>
-             
-
-             <div className="col-md">
-                    <div className="AppBack2"> 
-                    <div className="cards-container">                 
-                        {filteredData.map((value,index)=>(
-                    <ImpNews
-                        key={index} 
-                        name={value.tite}
-                        //cell={value.description}
-                        img={value.image}
-                        //ID ={index.id}             
-                        />
-                         ))}                                        
-                    </div>                   
-                </div>                
-             </div>
-</div>
-</div>
-);
-}*/

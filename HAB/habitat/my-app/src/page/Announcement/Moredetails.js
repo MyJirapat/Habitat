@@ -24,7 +24,7 @@ import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 import Detail from "../../Components/Anouncement/Detail";
 import Comment from "../../Components/Anouncement/Comment";
 
-
+import Detailscard from "../../Components/Anouncement/Detailscard";
 
 
 const drawerWidth = 240;
@@ -111,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-function MiniDrawer() {
+export default function MiniDrawer() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -144,82 +144,48 @@ function MiniDrawer() {
     setOpen(false);
   };
   return (
-    <div className={classes.root}>
+    <div className={classes.root}>        
       <CssBaseline />     
         <main className={classes.content}>
           <div className={classes.toolbar} />
           <Typography paragraph className={classes.Heading} >
             <div class="container d-flex-end">
-                
             </div>
           </Typography> 
 
-    <div class="container d-flex-end">        
-      <Card className={classes.Cards} variant="outlined">
-        <Table >
-         <TableHead className={classes.heder}>
-            <TableRow >     
-                <TableCell className={classes.heder}>
-                  <h4>Important News</h4>            
-                </TableCell>
-            </TableRow>
-          </TableHead>
-        <TableBody>
-     <br/>
-     <Grid container spacing={3}>
-        <Grid item xs={4}>
-                    <div className="col-sm">
-                    <Detail/>   
-                </div>
-        </Grid>
-           </Grid> 
-        </TableBody>
-      </Table> 
-    </Card>       
-      </div> 
-      </main>
+    <div class="container d-flex-end">       
+        <div className="row">     
+            <div className="col-md"> 
+                <Detail/>
+            </div> 
 
-        
-    <div className={classes.root2}>
-      <CssBaseline />     
-        <main className={classes.content}>
-          <div className={classes.toolbar} />
-          <Typography paragraph className={classes.Heading} >
-            <div class="container d-flex-end">
-                
-            </div>
-          </Typography> 
-
-    <div class="container d-flex-end">        
-      <Card className={classes.Card} variant="outlined">
-        <Table >
-         <TableHead className={classes.heder}>
-            <TableRow >     
-                <TableCell className={classes.heder}>
-                  <h4>Comment</h4>            
-                </TableCell>
-            </TableRow>
-          </TableHead>
-        <TableBody>
-     <br/>
-     <Grid container spacing={3}>
-        <Grid item xs={4}>
-                    <div className="col-sm">
-                      <Comment/>
-                </div>
-                <input></input>
-        </Grid>
-    </Grid> 
-        </TableBody>
-      </Table> 
-    </Card>       
-      </div> 
-      </main>
-    
-</div>
+            <div className="col-md"> 
+                <Comment/>
+            </div> 
+     </div>
 </div>
 
+
+            
+
+
+
+
+
+
+
+
+      </main>
+  </div>
+     
   );
 }
 
-export default MiniDrawer;
+
+
+
+
+
+
+
+

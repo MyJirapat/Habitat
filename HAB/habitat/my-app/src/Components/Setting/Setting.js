@@ -22,11 +22,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   paper: {
-    padding: theme.spacing(8),
+    padding: theme.spacing(6),
     marginTop: "-2%",
     margin: 'auto',
     width:"80%",
     height: "120%"
+
    
   },
 
@@ -72,7 +73,7 @@ export default function ComplexGrid() {
        style={{textAlign: "center"}}>Setup Residence</h2>
           <Grid item xs={13}  container>
             <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs={18}
+              <Grid item xs={15}
                     align="center"
                     style={{ border: "2px solid grey", 
                     borderColor: '#aaaaaa',

@@ -183,18 +183,14 @@ export default function MiniDrawer() {
         </Typography>
         <Typography paragraph>
         <div className="SetupBackground2" >  
-        <div className="container">
+            <div className="container">
         
                 <div className="row">     
                     <div className="col-xs">
                     < Setting/>      
                     </div>
-                  <div className="col-md-6">    
-                     
-                  </div>         
-                  <div className="col-md-6">                             
-                  </div>                         
-        </div>
+                                  
+            </div>
         </div>
         </div>      
         </Typography>            
