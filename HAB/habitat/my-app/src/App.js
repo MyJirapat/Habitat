@@ -9,7 +9,8 @@ import Setting from "../src/page/Setting/Setup";
 import Building from "../src/page/Building/Residence";
 import Expens from "../src/page/Expens/Electricity";
 import Feeset from "../src/Components/Feeset/Feeset";
-import Bill from "../src/page/Bill/Billpage"
+import Bill from "../src/page/Bill/Billpage";
+import Bedroom from "../src/page/Room/Bedroom";
 //import History from './Pages/History';
 //import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Route, Link, NavLink, Switch} from "react-router-dom";
@@ -20,6 +21,8 @@ function App() {
     <div className="App">
 
       <Route exact path="/expens" component={Expens}/>
+      <Route exact path="/bedroom" component={Bedroom}/>
+
       <Route exact path="/bill" component={Bill}/>
       <Route exact path="/" component={Socialcard}/>
       <Route exact path="/rooms" component={Rooms}/>
