@@ -84,8 +84,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   Btn:{
-    marginLeft: "77%",
-    marginTop: "-3%"
+    marginLeft: "60%",
+    marginTop: "-8%"
 
   }
 
@@ -109,13 +109,13 @@ export default function MiniDrawer() {
           <div className={classes.toolbar} />
           <Typography paragraph className={classes.Heading} >
             <div class="container d-flex-end">
-                <h4>Rooms</h4>
+                <h4>Room Management</h4>
             </div>
           </Typography> 
 
     <div class="container d-flex-end">       
       <div className="row">                
-        <div className="col-md-2">    
+        <div className="col align-self-start">    
         <Paper component="form" className={classes.Searchstyle}>
           <TextField className={classes.Field}
               size="small"
@@ -123,10 +123,11 @@ export default function MiniDrawer() {
               label="Search"     
               placeholder="Search..."
             />
+            
         </Paper>
       </div>
 
-      <div className="col-md-2">    
+      <div className="col align-self-start">    
         <Paper component="form" className={classes.Searchstyle}>
         <TextField className={classes.Field}
               size="small"
@@ -137,7 +138,7 @@ export default function MiniDrawer() {
       </Paper>
       </div>
 
-      <div className="col-md-2">    
+      <div className="col align-self-start">    
         <Paper component="form" className={classes.Searchstyle}>
         <TextField className={classes.Field}
               size="small"
@@ -148,7 +149,7 @@ export default function MiniDrawer() {
       </Paper>
       </div>
 
-      <div className="col-md-2">    
+      <div className="col align-self-start">    
         <Paper component="form" className={classes.Searchstyle}>
         <TextField className={classes.Field}
               size="small"
@@ -159,7 +160,7 @@ export default function MiniDrawer() {
       </Paper>
       </div>
 
-      <div className="col">    
+      <div className="col align-self-start">    
         <Button className={classes.Btn}
         variant="contained" color="primary" disableElevation
         style={{ backgroundColor: '#485D84' }}>Search</Button>
