@@ -85,11 +85,7 @@ export default function แสดงความคิดเห็น() {
                     <div className="col-md"> 
                         <Button className={classes.Button}>send</Button>
                        </div>
-                    </div>
-              
-              
-            
-               
+                    </div>             
             </Grid>        
           </Grid> 
         </Grid>

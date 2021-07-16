@@ -4,17 +4,17 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import {BrowserRouter as Router, Route, Link, NavLink, Switch} from "react-router-dom";
+import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    margin: theme.spacing(1),
   },
   paper: {
-    padding: theme.spacing(1),
+    padding: theme.spacing(2),
     margin: 'auto',
-    maxWidth: 430,
+    width: '100%',
+    
   },
   image: {
     width: 128,
@@ -28,41 +28,40 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ComplexGrid(props) {
+export default function Feetype(props) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
-          <Grid item>
-            <ButtonBase className={classes.image}>
-              <NavLink to="/details">
-              <img className={classes.img} src="https://www.simplilearn.com/ice9/free_resources_article_thumb/COVER-IMAGE_Digital-Selling-Foundation-Program.jpg" />
-              </NavLink>
-            </ButtonBase>
-          </Grid>
           <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">  
+                <Typography gutterBottom variant="h5">
+                  {props.Set}
+                </Typography>
+                <Typography variant="body2" gutterBottom>       
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                 <p>18/04/2021</p> 
+                {props.Roomprice}
                 </Typography>
-                <Typography gutterBottom variant="subtitle1">
-                 <h5>General News </h5> 
+                <Typography variant="body2" color="textSecondary">
+                {props.Electric}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                {props.Water}
                 </Typography>
               </Grid>
               <Grid item>
                 <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                  {props.remove}
+                 {props.Delete}
                 </Typography>
               </Grid>
             </Grid>
             <Grid item>
-              
-            </Grid>
+              <Button size="small">{props.delete}</Button>
+            </Grid>       
           </Grid>
         </Grid>
       </Paper>

@@ -8,6 +8,7 @@ import Deatails from "../src/page/Announcement/Moredetails";
 import Setting from "../src/page/Setting/Setup";
 import Building from "../src/page/Building/Residence";
 import Expens from "../src/page/Expens/Electricity";
+import Feeset from "../src/Components/Feeset/Feeset";
 //import History from './Pages/History';
 //import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Route, Link, NavLink, Switch} from "react-router-dom";
@@ -24,6 +25,8 @@ function App() {
       <Route exact path="/details" component={Deatails}/>
       <Route exact path="/building" component={Building}/>
       <Route exact path="/setting" component={Setting}/>
+      <Route exact path="/feeset" component={Feeset}/>
+
 
     </div>
   );

@@ -45,8 +45,10 @@ function ImportantNews(props) {
     <Grid item xs={12} sm={11} md={6} spacing={5} >  
        <Card className={classes.root} >
           <CardActionArea>
+          <NavLink to="/details">
             <img src={props.img} className={classes.media}/>  
             <h3 className={classes.move}>{props.name} </h3>
+            </NavLink>
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
               {props.Name}

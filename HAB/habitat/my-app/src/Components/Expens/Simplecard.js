@@ -108,9 +108,8 @@ export default function OutlinedCard(props) {
 
   return (
     <Card className={classes.root} variant="outlined">
-        <Typography variant="h5" component="h2" className={classes.Htext}>
-          {props.Text}
-        </Typography>
+       
+         
         <caption> {props.header}</caption>
       
       <Table className={classes.table} aria-label="caption table">
