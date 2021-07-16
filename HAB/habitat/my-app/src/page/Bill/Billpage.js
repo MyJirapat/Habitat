@@ -15,15 +15,17 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import NavLink from "../../Components/NavLink/NavLink";
+import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
 //import Table from "../Component/Table";
 import Button from "@material-ui/core/Button";
-import Feeset from "../../Components/Feeset/Feeset";
+
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 
 
 
 
-import Bill from "./Bill";
+import Bill from "../../Components/Bill/Bill";
 
 
 
@@ -179,29 +181,154 @@ export default function MiniDrawer() {
         <Typography paragraph>
         <div class="container d-flex justify-content-end">
                   <div className="row"> 
-                  <div className="col align-self-end">
-                           
-                      </div>
-                       <div className="col align-self-end">
-                            
-                      </div>            
+                    <div className="col align-self-end">
+                    <Paper component="form" className={classes.Searchstyle}>
+                        <TextField className={classes.Field}
+                            size="small"
+                            variant="outlined" 
+                            label="Search"     
+                            placeholder="Search..."
+                        />
+                    </Paper> 
+                    </div>
 
-                      <div className="col align-self-end">
-                         
-                      </div>
+                    <div className="col align-self-end">
+                    <Paper component="form" className={classes.Searchstyle}>
+                        <TextField className={classes.Field}
+                            size="small"
+                            variant="outlined" 
+                            label="Search"     
+                            placeholder="Search..."
+                        />
+                    </Paper> 
+                    </div>            
 
-                       <div className="col align-self-end">
-                            
-                      </div>        
+                    <div className="col align-self-end">
+                    <Paper component="form" className={classes.Searchstyle}>
+                        <TextField className={classes.Field}
+                            size="small"
+                            variant="outlined" 
+                            label="Search"     
+                            placeholder="Search..."
+                        />
+                    </Paper> 
+                    </div>
+
+                    <div className="col align-self-end">
+                    <Paper component="form" className={classes.Searchstyle}>
+                        <TextField className={classes.Field}
+                            size="small"
+                            variant="outlined" 
+                            label="Search"     
+                            placeholder="Search..."
+                        />
+                    </Paper> 
+                    </div>        
             
               </div>              
              </div>
 
         <div class="container d-flex-end">
         <div className="row">        
-          < Feeset/>
+          <Bill
+                header="Floor1"
+                room1="101"
+                status1="27/04/2021"
+                PreviousDate1="4,700.00"
+                previousReading1="575"
+                curentReading1="90"
+                usage1="0"
+                option1="5,366.00"
+
+                room2="102"
+                status2="27/04/2021"
+                PreviousDate2="4,700.00"
+                previousReading2="575"
+                curentReading2="90"
+                usage2="0"
+                option2="5,366.00"
+
+
+                room3="103"
+                status3="27/04/2021"
+                PreviousDate3="4,700.00"
+                previousReading3="575"
+                curentReading3="90"
+                usage3="0"
+                option3="5,366.00"
+
+                room4="104"
+                status4="-"
+                PreviousDate4="-"
+                previousReading4="-"
+                curentReading4="-"
+                usage4="-"
+                option4="-"
+
+                room5="105"
+                status5="27/04/2021"
+                PreviousDate5="5,700.00"
+                previousReading5="575"
+                curentReading5="90"
+                usage5="0"
+                option5="5,366.00"
+      
+         />
 
          </div>
+
+         <br/>
+
+
+         <div className="row">        
+          <Bill
+                 header="Floor1"
+                room1="101"
+                status1="27/04/2021"
+                PreviousDate1="4,700.00"
+                previousReading1="575"
+                curentReading1="90"
+                usage1="0"
+                option1="5,366.00"
+
+                room2="102"
+                status2="27/04/2021"
+                PreviousDate2="4,700.00"
+                previousReading2="575"
+                curentReading2="90"
+                usage2="0"
+                option2="5,366.00"
+
+
+                room3="103"
+                status3="27/04/2021"
+                PreviousDate3="4,700.00"
+                previousReading3="575"
+                curentReading3="90"
+                usage3="0"
+                option3="5,366.00"
+
+                room4="104"
+                status4="-"
+                PreviousDate4="-"
+                previousReading4="-"
+                curentReading4="-"
+                usage4="-"
+                option4="-"
+
+                room5="105"
+                status5="27/04/2021"
+                PreviousDate5="5,700.00"
+                previousReading5="575"
+                curentReading5="90"
+                usage5="0"
+                option5="5,366.00"
+      
+         />
+
+         </div>
+
+
          
          </div>
          

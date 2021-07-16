@@ -178,7 +178,6 @@ export default function Bill(props) {
         </Grid>
         </TableBody>
         </Table>    
-     
       <CardActions>
         <Button size="small">{props.Btn}</Button>
       </CardActions>
