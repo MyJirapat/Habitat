@@ -28,7 +28,7 @@ import Nav from 'react-bootstrap/Nav'
 import TabPane from 'react-bootstrap/TabPane'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
+import Uploadimg from "../../Components/Room/Uploadimg";
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,6 +54,10 @@ const useStyles = makeStyles((theme) => ({
   container: {
     maxHeight:440,
     width: '100%'
+  },
+
+  Gridmove:{
+    marginLeft: 80
   },
   
   toolbar: {
@@ -118,30 +122,6 @@ export default function MiniDrawer() {
                 <h4>Room Management</h4>
             </div>
           </Typography> 
-
-    <div class="container d-flex-end">       
-      <div className="row">                
-        <div className="col align-self-start">    
-        
-        </div>
-
-        <div className="col align-self-start">    
-        
-        </div>
-
-        <div className="col align-self-start">    
-        
-        </div>
-
-      <div className="col align-self-start">    
-        
-      </div>
-
-      <div className="col align-self-start">    
-        
-      </div>
-    </div> 
-  </div>
     
   <Tab.Container  defaultActiveKey="home" >
     <div class="container d-flex-end">        
@@ -164,15 +144,26 @@ export default function MiniDrawer() {
           </TableHead>
         <TableBody>
      <br/>
+
      <Grid container spacing={2}>
         <Grid item xs={3}>
+        <Tab.Content>
+        <Tab.Pane eventKey="home">
             <div className="col-md">
-                          
+            <Uploadimg/>          
             </div>
+        </Tab.Pane >
+        </Tab.Content>
+        <Tab.Content>
+        <Tab.Pane eventKey="link-1">
+            <div className="col-md">
+            <Uploadimg/>          
+            </div>
+        </Tab.Pane >
+        </Tab.Content>
         </Grid>
-
-        
-        <Grid item xs={6} >
+  
+        <Grid xs={6} className={classes.Gridmove}>
         <Tab.Content>
         <Tab.Pane eventKey="home">
             <div className="col-md">
@@ -279,30 +270,114 @@ export default function MiniDrawer() {
           </div>
           </Tab.Pane>
       </Tab.Content>
-      </Grid>
-      
-   
-        <Grid item xs={3}>
-                    <div className="col-md">
-                   
-                  </div>
-        </Grid>
-        <Grid item xs={3}>
-                    <div className="col-md">
-                        
-                    </div>
-        </Grid>
+      <Tab.Content>
+        <Tab.Pane eventKey="link-1">
+            <div className="col-md">
+              <form noValidate>      
+              <div className="password">
+                <label htmlFor="Address">Address</label>
+                <input   
+                  placeholder="Address"
+                  type="text"
+                  name="Address"
+                  noValidate           
+                />    
+              </div>
 
-        <Grid item xs={3}>
-                    <div className="col-md">
-                          
-                  </div>
-        </Grid>
-        <Grid item xs={3}>
-                    <div className="col-md">
-                    
-                  </div>
-        </Grid>
+              <div className="firstName">
+                <label htmlFor="Age">Phone Number</label>
+                <input
+                  placeholder="Phone Number"
+                  type="text"
+                  name="Phone Number"
+                  noValidate       
+                />
+              </div>
+
+              <div className="lastName">
+                <label htmlFor="lastName">Email</label>
+                <input
+                  placeholder="Email"
+                  type="text"
+                  name="lastName"
+                  noValidate        
+                />         
+              </div>
+              <div className="Building">
+                <label htmlFor="BuildingName">Building Name</label>
+                <input   
+                  placeholder="Building Name"
+                  type="Buildingname"
+                  name="text"
+                  noValidate           
+                />    
+              </div>
+
+              <div className="SubDistric">
+                <label htmlFor="Sub-Distric">Sub-distric</label>
+                <input   
+                  placeholder="Sub-distric"
+                  type="Sub-Distric"
+                  name="Sub-Distric"
+                  noValidate           
+                />    
+              </div>
+
+              <div className="District">
+                <label htmlFor="District">District</label>
+                <input   
+                  placeholder="District"
+                  type="District"
+                  name="District"
+                  noValidate           
+                />    
+              </div>
+
+              <div className="zipcode">
+                <label htmlFor="District">Zipcode</label>
+                <input   
+                  placeholder="Zipcode"
+                  type="text"
+                  name="District"
+                  noValidate           
+                />    
+              </div>
+
+              <div className="zipcode">
+                <label htmlFor="District">Zipcode</label>
+                <input   
+                  placeholder="Zipcode"
+                  type="text"
+                  name="District"
+                  noValidate           
+                />    
+              </div>
+
+              <div className="firstName">
+                <label htmlFor="Age">Phone Number</label>
+                <input
+                  placeholder="Phone Number"
+                  type="text"
+                  name="Phone Number"
+                  noValidate       
+                />
+              </div>
+
+              <div className="lastName">
+                <label htmlFor="lastName">Email</label>
+                <input
+                  placeholder="Email"
+                  type="text"
+                  name="lastName"
+                  noValidate        
+                />         
+              </div>
+            </form>
+          </div>
+          </Tab.Pane>
+      </Tab.Content>
+      </Grid>
+        
       </Grid>        
           </TableBody>
         </Table> 
