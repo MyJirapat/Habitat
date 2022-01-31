@@ -1,0 +1,22 @@
+
+#generalcelltitle{
+    color: #4A4A4A;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20;
+    position: relative; 
+    top: -5px; 
+    left: 0px; 
+    
+
+}
+
+#generalcelldate{
+    color: #AAAAAA;
+    font-size: 10px;
+    font-weight: 200;
+    position: relative; 
+    top: 8px; 
+    left: 0px; 
+
+}

@@ -1,0 +1,134 @@
+
+/* -19.1% */
+
+.circletext {
+    width: 38px;
+    height: 38px;
+    background-color: #D8D8D8;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #4A4A4A;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 38px;       /* The same as your div height */
+
+}
+
+
+#center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.inline {
+    display: inline-block;
+    border: 1px solid rgb(27, 226, 126);
+
+    
+
+}
+
+.container2 {
+    border: 1px solid rgb(27, 226, 126);
+    width: 100%;
+    height: 100px;
+}
+
+.center1 {
+    display: inline-block;
+    margin: auto;
+    width: 10%;
+    border: 3px solid green;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+.center2 {
+    display: inline-block;
+    margin: auto;
+    width: 70%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.center3 {
+    display: inline-block;
+    margin: auto;
+    width: 20%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.textsetting {
+    color: #4A4A4A;
+    font-size: 16px;
+    width: 200px;
+}
+
+
+Button {
+    background: #485D84;
+    color: #ffffff;
+    width: 74.5px;
+    height: 27.5px;
+    border-radius: 23.5px;
+}
+
+.marleft {
+    margin-left: 112px;
+    margin-right: 20px;
+}
+
+
+
+.item {
+    float:left;
+    border: none;
+    vertical-align: middle;
+    height: 38px;
+    line-height: 38px;
+}
+
+.itemright {
+    float:right;
+    border: none;
+    vertical-align: middle;
+    height: 38px;
+    line-height: 38px;
+}
+
+.setzero {
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+}
+
+
+.topicsetup {
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    color: #4A4A4A;
+    padding-top: 55px;
+}
+
+.inner-button-container{
+    background-color:grey;
+    position:absolute;
+    bottom:0;
+    right:0;
+    left:0;
+    text-align:center;
+  }
+
+  .rowset {
+      height: 50px;
+  }
+
+  .height26 {
+        height: 26px;
+  }

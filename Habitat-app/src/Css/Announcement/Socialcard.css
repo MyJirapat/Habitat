@@ -1,0 +1,320 @@
+h5{
+    font-family: 'Helvetica Neue', sans-serif;
+    padding-top: 20pt;
+    padding-bottom: 14pt;
+    padding-left: 18pt;
+    text-align: left;
+    color: #4A4A4A;
+    
+}
+
+h5.headAnnounce{
+    color :#4A4A4A;
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+    padding-left: 0pt;
+    text-align: left;
+}
+
+
+.greatcards-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 8px;
+    min-width: 510pt;
+    max-width: 510pt;
+    min-height: 200pt;
+    /* border: 3px solid rgb(0, 128, 17); */
+
+    /* padding-left: 20pt; */
+}
+
+.greatcards-container2{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 8px;
+    min-width: 310pt;
+    max-width: 310pt;
+    min-height: 200pt;
+    /* border: 3px solid rgb(0, 128, 17); */
+
+}
+
+Card2{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 10px;
+ 
+}
+
+CardActionArea2{
+    width: 100px;
+    height: 100px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+  
+.container {
+    padding: 2px 16px;
+}
+
+p{
+    color: aqua;
+    text-align: left;
+}
+
+.padleft{
+    padding-left: 41pt;
+    padding-top: 22pt;
+    padding-bottom: 20pt;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    /* border: 3px solid green; */
+}
+
+table {
+    order: 3px solid green;
+}
+
+.col-md{
+    border: 3px solid green;
+
+
+}
+
+.left {
+    width: 25%;
+}
+  
+.right {
+    /* border: 3px solid red; */
+
+}
+
+th {
+    /* border: 3px solid red; */
+
+}
+.row {
+    /* border: 3px solid yellow; */
+}
+
+.colorG {
+    /* border: 3px solid purple; */
+
+}
+
+.colorB {
+    /* border: 3px solid rgb(0, 128, 122); */
+
+}
+
+.newH {
+    height: 60px;
+}
+
+/* .alignRight{
+    float: right;
+} */
+
+Button {
+    position:relative;
+    top:0;
+    left:0;
+    float:right;
+    width: 123px;
+}
+
+#Buttoncompose {
+    position:relative;
+    top:0;
+    left:0;
+    float:right;
+    width: 123px;
+    height: 33px;
+}
+
+#Buttonimage {
+    width: 33px;
+    height: 33px;
+    
+}
+
+
+#editfontbutton {
+    font-size: 30;
+    position: "absolute";
+    padding-top: 15%;
+    color: white;
+    text-transform: none;
+}
+
+.grab {
+    grid-gap: 40px;
+
+}
+
+#importanttitle {
+    font-weight: bold;
+    color: #4A4A4A;
+}
+
+#newannouncetitle {
+    font-weight: bold;
+    color: #4A4A4A;
+}
+
+#generaltitle {
+    font-weight: bold;
+    color: #4A4A4A;
+}
+
+#announcementheader {
+    font-weight: bold;
+    color: #4A4A4A;
+}
+
+.mediumfont {
+    font-weight: 500;
+}
+
+.divider {
+    border-top: 1px solid #AAAAAA;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-bottom: 15px;
+  }
+
+#announceBT {
+ background-color: #485D84;
+ width: 123px;
+ height: 33px;
+}
+
+#cancelBT {
+    background-color: #ffffff;
+    border: 1px solid #AAAAAA;
+    width: 123px;
+    height: 33px;
+}
+
+#textAnnounceBt {
+    margin: 0;
+    color: #ffffff;
+    text-transform: none;
+}
+
+#cancelAnnounceBt {
+    margin: 0;
+    color: #4A4A4A;
+    text-transform: none;
+
+}
+
+.spacing {
+    width:6px;
+    height:auto;
+    display:inline-block;
+}
+
+#descriptiontitle {
+    color: #AAAAAA;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#typetitle {
+    color: #AAAAAA;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top:  6px;
+
+
+}
+
+#titletitle {
+    display: inline;
+    color: #AAAAAA;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: left;
+
+
+
+}
+
+#con {
+    
+    /* border: 1px solid rgb(190, 65, 65); */
+    /* margin-left: 200px; */
+    width: 1200px;
+    height: 730px;
+    padding-left: 70px;
+    margin: auto
+
+}
+
+#datetitle {
+    color: #AAAAAA;
+    font-size: 16px;
+    font-weight: bold;
+
+
+}
+
+.spacing12 {
+    width:12px;
+    height:auto;
+    display:inline-block;
+}
+
+.spacing9 {
+    width:9.5px;
+    height:auto;
+    display:inline-block;
+}
+
+.titleinput {
+    width: 556px;
+}
+
+.typeinput {
+    width: 278px;
+}
+
+.dateinput {
+    width: 220px;
+    height: 34px;
+}
+
+.movetotop {
+    position: absolute;
+    margin-top: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,137 @@
+.AppBack {
+  /*padding: 10rem;*/
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+  margin-left: 3%;
+  transition: 0.3s;
+  width: 105%;
+}
+
+.AppBack2 {
+  /*padding: 10rem;*/
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+  transition: 0.3s;
+  margin-left: 16%;
+  width: 75%;
+}
+
+hr.new4 {
+  border: 1px solid rgb(44, 42, 42);
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.search-box {
+  outline: none;
+  width: 100%;
+  border: 1px solid grey;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: .5rem;
+}
+
+/*.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 80%;
+}*/
+
+/*.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}*/
+
+.container {
+  padding: 40px 0px;
+  width: 40px 40px;
+}
+
+input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+}
+.Title{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.Title {
+  width: 100%;
+}
+
+.Date{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+}
+
+.Type,
+.Date {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.Type,
+.Date {
+width: 49%;
+}
+
+.Type {
+margin-right: 1%;
+}
+
+.Date {
+margin-left: 1%;
+}
+
+.Description{
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  
+}
+.Description {
+  width: 600px;
+}
+
+textarea {
+  vertical-align: top;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  height: 220px;
+
+}
+
+.Des {
+  margin-top: 5px ;
+  /* padding: 100px 90px;
+  border-radius: 5px; */
+ 
+}
+
+#importantdate {
+  color: #4A4A4A;
+  font-size: 10px;
+   position: relative; 
+    top: -5px; 
+    left: 0px; 
+    
+}
+
+#importanttopic {
+  color: #4A4A4A;
+  font-size: 14px;
+  font-weight: bold;
+
+}
+
+

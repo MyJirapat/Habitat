@@ -1,0 +1,37 @@
+/* select {
+	width:300px;
+	float:left;
+	appearance:none;
+	-webkit-appearance:none;
+	-ms-appearance:none;
+	border:2px solid #000;
+	background:url('http://www.free-icons-download.net/images/small-down-arrow-icon-15593.png');
+	background-repeat:no-repeat;
+	background-size:16px 17px;
+	background-position:right 0px;
+} */
+
+select {
+    /* General styling */
+    display: inline;
+    height: 34px;
+    width: 278px;
+    border-radius: 0;
+    padding-left: 10px;
+    border:1px solid rgb(207, 207, 207);
+
+    /* Removes the default <select> styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    /* Positions background arrow image */
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-position: 245px center;
+    border-radius: 5px;
+
+
+
+    
+  }
