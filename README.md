@@ -7,3 +7,5 @@ Habitat is a dormitory of university on campus application built on 2 platforms 
 Assign the student to be tenant. After the staff save the information of students, the system will send all necessary information via their email. For example, the room number, username, and password
 ![Roommanagement](https://user-images.githubusercontent.com/74519762/151739449-dd493636-3f00-404b-a41e-d8e5287931e7.png)
 
+# Announcement
+![Announcement](https://user-images.githubusercontent.com/74519762/151741387-ca11bb38-2b0d-476f-bf9b-2bdf7e17db59.png)
