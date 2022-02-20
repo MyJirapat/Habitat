@@ -1,179 +1,3 @@
-// import React from 'react'
-// import { makeStyles } from '@material-ui/core/styles';
-// import { ScrollView } from 'react-native';
-// import Datetoday from '../../Components/AllComponent/Datetoday';
-// import { Paper } from '@material-ui/core';
-// import { red } from 'chalk';
-// import { Row } from 'react-bootstrap';
-
-// const useStyles = makeStyles((theme) => ({
-//     frame: {
-//         width: '1163px',
-//         height: '115px',
-//         backgroundColor: 'red',
-//     },
-//     scrollspace: {
-//         height: "730px",
-//         width: '1163px',
-//         margin: 'auto',
-//         paddingLeft: 110,
-//         transition: 'all 0.5s ease'
-//     },
-//     scrollspace36: {
-//         height: "730px",
-//         width: '1163px',
-//         margin: 'auto',
-//         paddingLeft: 36,
-//         transition: 'all 0.5s ease'
-
-//     },
-//     mainfame: {
-//         width: '1163px',
-//         height: '567px',
-//         backgroundColor: 'blue',
-//         position: 'relative'
-//     },
-//     miniXfame: {
-//         width: '352px',
-//         height: '147px',
-//         backgroundColor: '#ffffff',
-//         position: 'relative',
-//         backgroundColor: '#ffffff'
-//     },
-//     Xfame: {
-//         width: '731px',
-//         height: '395px'
-//     }
-//     ,
-//     Yfame: {
-//         width: "407px",
-//         height: "567px",
-//         position: "absolute",
-//         backgroundColor: "#ffffff",
-//         right: 0
-//     },
-//     textDash: {
-//         fontSize: 19,
-//         color: "#4A4A4A",
-//         fontWeight: 'bold'
-//     },
-//     textRoom: {
-//         fontSize: 26,
-//         color: "#4A4A4A",
-//         fontWeight: 'bold'
-//     },
-//     normaltext: {
-//         fontSize: 16,
-//         color: "#4A4A4A",
-//     },
-//     circleborder: {
-//         width: 18,
-//         height: 18,
-//         borderRadius: '9px',
-//         marginRight: 20,
-//         marginLeft: 40
-//     }
-
-
-// }));
-
-// export default function Dashpage({ isOpened }) {
-//     const classes = useStyles();
-
-
-
-//     return (
-//         <div style={{ width: '100%' }}>
-//             <ScrollView>
-//                 <div className={isOpened ? classes.scrollspace36 : classes.scrollspace}>
-//                     <div>
-//                         <div className={classes.frame}>
-//                             <Datetoday />
-//                             <div className={classes.textDash}>
-//                                 Dashboard
-//                             </div>
-//                         </div>
-//                         <div className={classes.mainfame}>
-//                             <Paper className={classes.Yfame}>
-//                                 <div style={{ height: 283.5, width: "100%" }}>
-
-//                                 </div>
-//                                 <div style={{ height: 283.5, width: "100%", backgroundColor: 'red' }}>
-
-//                                     <div style={{ position: 'absolute', marginTop: 130, width: '100%'}}>
-//                                         <div className={classes.textDash} style={{position:'absolute', top: -100, left: 120}}>
-//                                             Overall of Revenue
-//                                             </div>
-//                                         <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: 4 }}>
-//                                             <div className={classes.circleborder} style={{ backgroundColor: "#3BC045" }} />
-//                                             <div className={classes.normaltext} >Rent</div>
-//                                             <div className={classes.normaltext} >20,000.00</div>
-//                                             <div className={classes.normaltext} >THB</div>
-
-
-
-//                                         </div>
-//                                         <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: 4 }}>
-//                                             <div className={classes.circleborder} style={{ backgroundColor: "#5256C1" }} />
-//                                             <div className={classes.normaltext}>Electricity</div>
-//                                             <div className={classes.normaltext} >20,000.00</div>
-//                                             <div className={classes.normaltext} >THB</div>
-//                                         </div>
-//                                         <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: 4 }}>
-//                                             <div className={classes.circleborder} style={{ backgroundColor: "#FFD800" }} />
-
-//                                             <div className={classes.normaltext}>Water</div>
-//                                             <div className={classes.normaltext} >20,000.00</div>
-//                                             <div className={classes.normaltext} >THB</div>
-//                                         </div>
-//                                         <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: 4 }}>
-//                                             <div className={classes.circleborder} style={{ backgroundColor: "#C03B3B" }} />
-
-//                                             <div className={classes.normaltext}>Others</div>
-//                                             <div className={classes.normaltext} >20,000.00</div>
-//                                             <div className={classes.normaltext} >THB</div>
-//                                         </div>
-//                                     </div>
-
-//                                 </div>
-
-//                             </Paper>
-
-//                             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-//                                 <Paper className={classes.miniXfame}>
-//                                     <div className={classes.textRoom} style={{ paddingLeft: 20, paddingTop: 20 }}>
-//                                         20 Rooms
-//                                     </div>
-//                                     <div className={classes.normaltext} style={{ paddingLeft: 20, paddingTop: 20 }}>
-//                                         New occupied room in April
-//                                     </div>
-//                                 </Paper>
-
-//                                 <div style={{ width: 26 }} />
-//                                 <Paper className={classes.miniXfame}>
-//                                     <div className={classes.textRoom} style={{ paddingLeft: 20, paddingTop: 20 }}>
-//                                         60 Rooms
-//                                     </div>
-//                                     <div className={classes.normaltext} style={{ paddingLeft: 20, paddingTop: 20 }}>
-//                                         Vacant Room
-//                                     </div>
-//                                 </Paper>
-
-//                             </div>
-//                             <Paper className={classes.Xfame} style={{ marginTop: 25 }}>
-
-//                             </Paper>
-
-//                         </div>
-//                     </div>
-//                 </div>
-//             </ScrollView>
-
-//         </div>
-
-
-//     )
-// }
 
 import React, { useState,useEffect} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
@@ -187,10 +11,8 @@ import { scaleOrdinal } from "d3-scale";
 import { schemeCategory10 } from "d3-scale-chromatic";
 import axios from "axios";
 import NumberFormat from 'react-number-format';
-
 import DropBuilding from '../../Components/Dropdown/DropBuilding';
 import { BrowserRouter as Rounter, Route, Link, NavLink, Switch, useParams, useLocation } from 'react-router-dom';
-
 import moment from 'moment';
 
 const useStyles = makeStyles((theme) => ({
@@ -212,8 +34,7 @@ const useStyles = makeStyles((theme) => ({
         margin: 'auto',
         paddingLeft: 36,
         transition: 'all 0.5s ease'
-
-    },
+    },  
     mainfame: {
         width: '1163px',
         height: '567px',
@@ -244,28 +65,23 @@ const useStyles = makeStyles((theme) => ({
         color: "#4A4A4A",
         fontWeight: 'bold'
     },
-
     textLindchart:{
         fontSize: 22, 
         color:"#4A4A4A",
         fontWeight: 'bold',
-        position: "absolute",
-        
+        position: "absolute",       
     },
-
 
     textBar:{
         color:"#4A4A4A",
         fontWeight: 'bold',
-
     },
 
     Currency:{
         fontSize: 13, 
         color:"#4A4A4A",
         //fontWeight: 'bold',
-        position: "absolute",
-        
+        position: "absolute",       
     },
 
     textRoom: {
@@ -292,9 +108,7 @@ const useStyles = makeStyles((theme) => ({
     textDrop: {
         fontSize: 16,
         color: "#4A4A4A"
-
     },
-
 }));
 
 //const colors = scaleOrdinal(schemeCategory10)
@@ -369,49 +183,49 @@ export default function Dashpage({ isOpened }) {
       };
 
     useEffect(()=>{
-        axios.get(`/history/barchart/${id}`).then(response =>{
-        console.log(response.data);
-        setBardash(response.data);
+        axios.get(`/history/barchart/${id}`)
+        .then(response =>{
+            console.log(response.data);
+            setBardash(response.data);
+    })
+        .catch(error => {
+            console.log('Error data: ' + error);
         })
-    .catch(error => {
-      console.log('Error data: ' + error);
-      })
   }, []);
 
     useEffect(()=>{
-        axios.get(`/history/dashboard-graph/${id}`).then(response =>{
-        console.log(response.data);
-        setLinedash(response.data);
+        axios.get(`/history/dashboard-graph/${id}`)
+        .then(response =>{
+            console.log(response.data);
+            setLinedash(response.data);
     })
-    .catch(error => {
-    console.log('Error data: ' + error);
-  })
+        .catch(error => {
+             console.log('Error data: ' + error);
+        })
 }, []);
 
-useEffect(()=>{
-    axios.get(`/history/barchart-info/${id}`)
-    .then(response =>{
-    console.log(response.data);
-    setInfo(response.data);
-})
-.catch(error => {
-console.log('Error data: ' + error);
-})
+    useEffect(()=>{
+        axios.get(`/history/barchart-info/${id}`)
+        .then(response =>{
+            console.log(response.data);
+            setInfo(response.data);
+    })
+        .catch(error => {
+            console.log('Error data: ' + error);
+        })
 }, []);
-
-
 
     useEffect(()=>{
         //axios.get(`/history/room/${currentBuilding}`)
         axios.get(`/history/room/${id}`)
         .then(response =>{
-        console.log(response.data);
-        setVacants(response.data);
-        setAllFloor(response.data);
+            console.log(response.data);
+            setVacants(response.data);
+            setAllFloor(response.data);
     })
-    .catch(error => {
-    console.log('Error data: ' + error);
-    })
+        .catch(error => {
+            console.log('Error data: ' + error);
+        })
 }, []);
 
     return (
@@ -427,13 +241,11 @@ console.log('Error data: ' + error);
                         </div>
                         <div className={classes.mainfame}>
                             <Paper className={classes.Yfame}>
-
                             {/*<div>
                                     <div className={classes.textDrop}>
                                         Building
                                     </div>
                                     <div style={{ height: 4 }} />
-
                                     <DropBuilding
                                     save={currentBuilding => 
                                         setCurrentBuilding(currentBuilding)}
@@ -447,18 +259,14 @@ console.log('Error data: ' + error);
                                       width={380}
                                       height={290}
                                       data={bardash}
-                                    
                                       margin={{top: 20,right: 30,left: 20,bottom: 5}}>
                                         <CartesianGrid strokeDasharray="3 3" />
                                         <XAxis 
                                         dataKey="dataTime" 
                                         dataKey2= "dataTime" 
-
-                                        tickFormatter={dateFormatter} 
-                                        
+                                        tickFormatter={dateFormatter}   
                                         />
-                                        <YAxis />
-                                       
+                                        <YAxis/>      
                                         <Bar
                                             dataKey="electricity"
                                             dataKey2="water"
@@ -475,142 +283,116 @@ console.log('Error data: ' + error);
                                             </BarChart>
                                 </div>
 
-                               
-                                <div style={{ height: 283.5, width: "100%"}}>
-                               
+                                <div style={{ height: 283.5, width: "100%"}}> 
                                     <div style={{ position: 'absolute', marginTop: 130, width: '100%'}}>
                                         <div className={classes.textDash} style={{position:'absolute', top: -50, left: 120}}>
                                             Overall of Revenue
-                                            </div>
-                                            
+                                            </div>                
                                         <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: 4 }}>
-                                        
-                                      
                                             <div className={classes.circleborder} style={{ backgroundColor: "#3BC045" }} />
-                                      
-                                            <div className={classes.normaltext}> Rent </div>
-                                           
-                                            <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 155}} >
-                                            <NumberFormat
-                                                                                    value={parseInt(info.rent).toFixed(2)}
-                                                                                    displayType="text"
-                                                                                    thousandSeparator={true}
-                                                                                    decimalScale={2} />
-                                            
-                                            </div>
-                                     
-                                            <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 94}} >THB</div>
-                                          
-                                       
-                                        </div>
+                                                <div className={classes.normaltext}> Rent </div>
+                                                    <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 155}} >
+                                                         <NumberFormat
+                                                            value={parseInt(info.rent).toFixed(2)}
+                                                            displayType="text"
+                                                            thousandSeparator={true}
+                                                            decimalScale={2} />
+                                                    </div>
+                                                <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 94}} >THB</div>
+                                             </div>
 
                                         <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: 4 }}>
-                                            <div className={classes.circleborder} style={{ backgroundColor: "#5256C1" }} />
-                                            <div className={classes.normaltext}>Electricity</div>
-                                            <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 155}}  >
-
-                                                                           <NumberFormat
-                                                                                    value={parseInt(info.electricity).toFixed(2)}
-                                                                                    displayType="text"
-                                                                                    thousandSeparator={true}
-                                                                                    decimalScale={2} />
-                                              
-                                                
-                                            </div>
-                                            <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 94}} >THB</div>
+                                                <div className={classes.circleborder} style={{ backgroundColor: "#5256C1" }} />
+                                                    <div className={classes.normaltext}>Electricity</div>
+                                                        <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 155}}  >
+                                                            <NumberFormat
+                                                                value={parseInt(info.electricity).toFixed(2)}
+                                                                displayType="text"
+                                                                thousandSeparator={true}
+                                                                decimalScale={2} />
+                                                        </div>
+                                                <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 94}} >THB</div>
                                         </div>
+
                                         <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: 4 }}>
                                             <div className={classes.circleborder} style={{ backgroundColor: "#FFD800" }} />
-
-                                            <div className={classes.normaltext}>Water</div>
-                                            <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 155}}  >
-                                                                            <NumberFormat
-                                                                                    
-                                                                                    value={parseInt(info.water).toFixed(2)}
-                                                                                    displayType="text"
-                                                                                    thousandSeparator={true}
-                                                                                    decimalScale={2} />
-                                            
-                                            </div>
+                                                <div className={classes.normaltext}>Water</div>
+                                                    <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 155}}  >
+                                                            <NumberFormat
+                                                                value={parseInt(info.water).toFixed(2)}
+                                                                displayType="text"
+                                                                thousandSeparator={true}
+                                                                decimalScale={2} />
+                                                    </div>
                                             <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 94}} >THB</div>
                                         </div>
+
                                         <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: 4 }}>
                                             <div className={classes.circleborder} style={{ backgroundColor: "#C03B3B" }} />
-
-                                            <div className={classes.normaltext}>Others</div>
-                                            <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 155}} >
-                                                                                <NumberFormat                               
-                                                                                    value={parseInt(info.other).toFixed(2)}
-                                                                                    displayType="text"
-                                                                                    thousandSeparator={true}
-                                                                                    decimalScale={2} />       
-                                            </div>
+                                                <div className={classes.normaltext}>Others</div>
+                                                    <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 155}} >
+                                                            <NumberFormat                               
+                                                                value={parseInt(info.other).toFixed(2)}
+                                                                displayType="text"
+                                                                thousandSeparator={true}
+                                                                decimalScale={2} />       
+                                                    </div>
                                             <div className={classes.normaltext} style={{ position: 'absolute', color: '#4A4A4A', right: 94}} >THB</div>
                                         </div>
                                     </div>
-                                  
                                 </div>
-                              
                             </Paper>
+  
+                                <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                    <Paper className={classes.miniXfame}>
+                                        {vacants.map((value,index)=>(
+                                            <div className={classes.textRoom} style={{ paddingLeft: 20, paddingTop: 20 }}>
+                                                {value.overdue}  Rooms 
+                                            </div>
+                                            ))}   
 
-                           
-                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                                <Paper className={classes.miniXfame}>
-                                {vacants.map((value,index)=>(
-                                    <div className={classes.textRoom} style={{ paddingLeft: 20, paddingTop: 20 }}>
-                                     {value.overdue}  Rooms 
-                                    </div>
-                                     ))}   
-                                    <div className={classes.normaltext} style={{ paddingLeft: 20, paddingTop: 20 }}>
-                                        Occupied Rooms
-                                    </div>
-                                   
-                                </Paper>
+                                            <div className={classes.normaltext} style={{ paddingLeft: 20, paddingTop: 20 }}>
+                                                Occupied Rooms
+                                            </div>
+                                    </Paper>
                                 
                                 <div style={{ width: 26 }} />
-                                <Paper className={classes.miniXfame}>
-                                {vacants.map((value,index)=>(
-                                    <div className={classes.textRoom} style={{ paddingLeft: 20, paddingTop: 20 }}>
-                                        {value.vacant}  Rooms
-                                    </div>
-                                       ))}   
-                                    <div className={classes.normaltext} style={{ paddingLeft: 20, paddingTop: 20 }}>
-                                        Vacant Rooms
-                                    </div>
-                                </Paper>       
-                            </div>
-                                <Paper className={classes.Xfame} style={{ marginTop: 25 }}>
-                                <div className={classes.normaltextMonth}>
+                                    <Paper className={classes.miniXfame}>
+                                        {vacants.map((value,index)=>(
+                                            <div className={classes.textRoom} style={{ paddingLeft: 20, paddingTop: 20 }}>
+                                                {value.vacant}  Rooms
+                                            </div>
+                                            ))}   
 
-                                    <h3 className={classes.textLindchart} style={{marginLeft: 56, marginTop: 15}}>Revenue <p className={classes.Currency} style={{marginLeft: 97, marginTop: -18}}>(THB)</p> </h3>
-                                    <LineChart
-                                       
-                                        width={700} height={360} data={linedash}
-                                        margin={{top: 60,right: 10,left: 50,bottom: -12}}>
-                                    <CartesianGrid strokeDasharray="1 1" />
-                                      <XAxis dataKey="dateTime"
-                                      tickFormatter={dateFormatter} 
-                                      />
-                                        <YAxis />
-                                        <Tooltip />
-                                        <Line
-                                            connectNulls
-                                            //type="monotone"
-                                            dataKey="totalPrice"
-                                            stroke="#8884d8"
-                                            fill="#8884d8"
-                                        />
-                                    </LineChart>
-                                    <LineChart width={500} height={200}data={Linedata}
-                                        margin={{top: 10,right: 30,left: 0,bottom: 0}}>
-                                    </LineChart>
-                                 </div>
-                            </Paper>
+                                            <div className={classes.normaltext} style={{ paddingLeft: 20, paddingTop: 20 }}>
+                                                Vacant Rooms
+                                            </div>
+                                    </Paper>       
+                                </div>
+
+                                    <Paper className={classes.Xfame} style={{ marginTop: 25 }}>
+                                        <div className={classes.normaltextMonth}>
+                                             <h3 className={classes.textLindchart} style={{marginLeft: 56, marginTop: 15}}>Revenue <p className={classes.Currency} style={{marginLeft: 97, marginTop: -18}}>(THB)</p> </h3>
+                                                <LineChart  width={700} height={360} data={linedash} margin={{top: 60,right: 10,left: 50,bottom: -12}}>
+                                                <CartesianGrid strokeDasharray="1 1" />
+                                                <XAxis dataKey="dateTime" tickFormatter={dateFormatter} />
+                                                <YAxis />
+                                                <Tooltip />
+                                                <Line connectNulls 
+                                                        dataKey="totalPrice"
+                                                        stroke="#8884d8"
+                                                        fill="#8884d8"
+                                                />
+                                                </LineChart>
+                                                    <LineChart width={500} height={200}data={Linedata} margin={{top: 10,right: 30,left: 0,bottom: 0}}>
+                                                </LineChart>
+                                        </div>
+                                </Paper>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </ScrollView>
-        </div>
+        </ScrollView>
+    </div>
     )
 }
 
