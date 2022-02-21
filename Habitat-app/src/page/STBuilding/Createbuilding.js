@@ -101,9 +101,9 @@ const useStyles = makeStyles((theme) => ({
 export default function Createbuilding(props) {
 
     const classes = useStyles()
-    const { values, setValue, errors, setErrors, handleInputChange, resetFormControls } = props;
-    const [inputText, setInputText] = useState("");
-    const [items, setItems] = useState([]);
+    //const { values, setValue, errors, setErrors, handleInputChange, resetFormControls } = props;
+    //const [inputText, setInputText] = useState("");
+    //const [items, setItems] = useState([]);
     const [building, setBuilding] = useState("");
     const [address, setAddress] = useState("");
     const [province, setProvince] = useState("");

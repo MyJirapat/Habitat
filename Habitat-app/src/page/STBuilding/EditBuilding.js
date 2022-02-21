@@ -184,8 +184,7 @@ export default function EditBuilding(props) {
                                 className={classes.setrow}
                                 placeholder="Address"
                                 type="text"
-                                id="address"
-                                //name="Address"
+                                id="address"                               
                                 value={address}
                                     onChange={(event) => {
                                     setAddress(event.target.value);
@@ -200,8 +199,7 @@ export default function EditBuilding(props) {
                                     placeholder="Province"
                                     type="text"
                                     id="province"
-                                    value={province}
-                                    //name="Province"
+                                    value={province}                                   
                                         onChange={(event) => {
                                         setProvince(event.target.value);
                                 }} />
@@ -215,8 +213,7 @@ export default function EditBuilding(props) {
                                          placeholder="Sub-disdrict"
                                         type="text"
                                         value={subDistrict}
-                                        id="sub distric"
-                                        //name="Province"
+                                        id="sub distric"                                       
                                             onChange={(event) => {
                                             setSubDistrict(event.target.value);
                                     }} />
@@ -229,8 +226,7 @@ export default function EditBuilding(props) {
                                         className={classes.setrow2}
                                         placeholder="Disdrict"
                                         type="text"
-                                        value={district}
-                                        //name="Province"
+                                        value={district}                                      
                                             onChange={(event) => {
                                             setDistrict(event.target.value);
                                         }} />
@@ -244,7 +240,6 @@ export default function EditBuilding(props) {
                                         placeholder="Zipcode"
                                         type="text"
                                         value={zipCode}
-                                        //name="Zipcode"
                                             onChange={(event) => {
                                             setZipCode(event.target.value);
                                     }} />
@@ -259,7 +254,6 @@ export default function EditBuilding(props) {
                                     placeholder="Phone Number"
                                     type="text"
                                     value={phoneNo}
-                                    //name="Phone Number"
                                     style={{ position: "absolute", width: "48.5%" }}
                                         onChange={(event) => {
                                         setPhoneNo(event.target.value);
@@ -273,7 +267,6 @@ export default function EditBuilding(props) {
                                     type="text"
                                     style={{ position: "absolute", width: "48.5%", left: 345 }}
                                     value={email}
-                                    //name="lastName"
                                     onChange={(event) => {
                                         setEmail(event.target.value);
                                      }}/>

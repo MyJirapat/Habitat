@@ -65,7 +65,6 @@ const useStyles = makeStyles((theme) => ({
         width: "1163px",
         height: "679.5px"
     },
-
     buttontop3: {
         //backgroundColor: '#ffff',
         borderRadius: "5px",
@@ -129,33 +128,32 @@ export default function STBuildingpage({ isOpened, props }) {
                             </Link>
                         </div>
                     </div>
-
                     <div className={classes.frame} style={{ display: "flex", flexWrap: 'wrap', paddingLeft: 59, paddingTop: 48.54 }}>
                         <ScrollView style={{ width: "110%", height: "100%" }}>
                             <div style={{ display: "flex", flexWrap: 'wrap' }}>
-                                {building.map((value, index) => (
-                                    <Cardsection
-                                        buildingName={value.buildingName}
-                                        numberOfRoom={value.numberOfRoom}
-                                        tenant={value.tenant}
-                                        overdue={value.overdue}
-                                        vacant={value.vacant}
-                                        id={value.id}
-                                        // getid={nowId => setNowId(nowId)}
-                                        Manage={
-                                            <Link to={`/setting2/${value.id}`}
-                                                style={{ textDecoration: "none" }}>
-                                                <Button className={classes.buttontop} >
-                                                    Manage
-                                                </Button>
-                                             </Link> 
-                                        }
-                                        Edit={
-                                            <Link to={`editbuilding_sp/${value.id}`}
-                                                style={{ textDecoration: "none" }}>
+                                    {building.map((value, index) => (
+                                        <Cardsection
+                                            buildingName={value.buildingName}
+                                            numberOfRoom={value.numberOfRoom}
+                                            tenant={value.tenant}
+                                            overdue={value.overdue}
+                                            vacant={value.vacant}
+                                            id={value.id}
+                                            // getid={nowId => setNowId(nowId)}
+                                             Manage={
+                                                <Link to={`/setting2/${value.id}`}
+                                                    style={{ textDecoration: "none" }}>
+                                                    <Button className={classes.buttontop} >
+                                                        Manage
+                                                    </Button>
+                                                </Link> 
+                                            }
+                                            Edit={
+                                                <Link to={`editbuilding_sp/${value.id}`}
+                                                    style={{ textDecoration: "none" }}>
                                                 <Button variant="outlined" className={classes.buttontop3} >
-                                              Edit
-                                            </Button>
+                                                    Edit
+                                                </Button>
                                             </Link>
                                         }
                                     />
