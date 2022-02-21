@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { line } from 'cli-spinners';
 import Axios from "axios";
 
-
 const useStyles = makeStyles((theme) => ({
     fame: {
         width: "755px",
@@ -105,7 +104,6 @@ export default function Createbuilding(props) {
     const { values, setValue, errors, setErrors, handleInputChange, resetFormControls } = props;
     const [inputText, setInputText] = useState("");
     const [items, setItems] = useState([]);
-
     const [building, setBuilding] = useState("");
     const [address, setAddress] = useState("");
     const [province, setProvince] = useState("");
@@ -115,11 +113,9 @@ export default function Createbuilding(props) {
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
 
-
     const Buildingsave = event => {
         event.preventDefault();
         Axios.post("/building/create-building", {
-
             "Building": {
                 "building_name": building
             },
@@ -130,12 +126,10 @@ export default function Createbuilding(props) {
             "Zipcode": zipcode,
             "Email": email,
             "PhoneNumber": phone
-
-        }).then((response) => {
-            window.location.href = '/building_sp';
-            console.log(response);
-        })
-
+                }).then((response) => {
+                    window.location.href = '/building_sp';
+                    console.log(response);
+            })  
     };
 
     return (
@@ -153,10 +147,8 @@ export default function Createbuilding(props) {
                         <div htmlFor="BuildingName" className={classes.eachtitle} style={{ paddingBottom: 5 }}>Building Name</div>
                         <input
                             className={classes.setrow}
-                            //className="form-control"
                             placeholder="Building Name"
                             type="text"
-                            //name="Building"
                             onChange={(event) => {
                                 setBuilding(event.target.value);
                             }}
@@ -168,8 +160,7 @@ export default function Createbuilding(props) {
                             className={classes.setrow}
                             placeholder="Address"
                             type="text"
-                            //name="Address"
-                            onChange={(event) => {
+                                onChange={(event) => {
                                 setAddress(event.target.value);
                             }} />
                     </div>
@@ -177,109 +168,85 @@ export default function Createbuilding(props) {
                     <div style={{ display: "flex" }} className={classes.setwidth}>
                         <div className="Province">
                             <div htmlFor="Province" className={classes.eachtitle} ></div>
+                                <input
+                                    className={classes.setrow2}
+                                    placeholder="Disdrict"
+                                    type="text"
+                                        onChange={(event) => {
+                                        setDistrict(event.target.value);
+                                    }} />
 
-                            <input
-                                className={classes.setrow2}
-                                placeholder="Disdrict"
-                                type="text"
-                                //name="Province"
-                                onChange={(event) => {
-                                    setDistrict(event.target.value);
-                                }} />
-
-                        </div>
+                            </div>
                         <div style={{ width: "12px" }}></div>
-                        <div className="SubDistric">
-                            <div htmlFor="Sub-Distric" className={classes.eachtitle}></div>
-
-                            <input
-                                className={classes.setrow2}
-                                placeholder="Sub-disdrict"
-                                type="text"
-                                //name="Province"
-                                onChange={(event) => {
-                                    setSubdistric(event.target.value);
-                                }} />
-
-                        </div>
+                            <div className="SubDistric">
+                                <div htmlFor="Sub-Distric" className={classes.eachtitle}></div>
+                                    <input
+                                        className={classes.setrow2}
+                                        placeholder="Sub-disdrict"
+                                        type="text"
+                                            onChange={(event) => {
+                                            setSubdistric(event.target.value);
+                                            }} />
+                                </div>
                         <div style={{ width: "12px" }}></div>
-
-                        <div className="District">
-                            <div htmlFor="District" className={classes.eachtitle}></div>
-                            <input
-
-                                className={classes.setrow2}
-                                placeholder="Province"
-                                type="text"
-                                //name="Province"
-                                onChange={(event) => {
-                                    setProvince(event.target.value);
-                                }} />
-                        </div>
-
-
-                        
-                        
+                            <div className="District">
+                                <div htmlFor="District" className={classes.eachtitle}></div>
+                                    <input
+                                        className={classes.setrow2}
+                                        placeholder="Province"
+                                        type="text"
+                                            onChange={(event) => {
+                                            setProvince(event.target.value);
+                                        }} />
+                                </div>
 
                         <div style={{ width: "12px" }}></div>
+                            <div className="zipcode">
+                                <div htmlFor="District" className={classes.eachtitle}></div>
+                                    <input
+                                        className={classes.setrow2}
+                                        placeholder="Zipcode"
+                                        type="text"
+                                        maxlength="5"
+                                            onChange={(event) => {
+                                            setZipcode(event.target.value);
+                                        }} />
+                                 </div>
+                            </div>
 
-                        <div className="zipcode">
-                            <div htmlFor="District" className={classes.eachtitle}></div>
-                            <input
-                                className={classes.setrow2}
-                                placeholder="Zipcode"
-                                type="text"
-                                //name="Zipcode"
-                                maxlength="5"
-                                onChange={(event) => {
-                                    setZipcode(event.target.value);
-                                }} />
-
-                        </div>
-                    </div>
-
-                    <div style={{ display: "flex" }} className={classes.setwidth2}>
-                        <div style={{ width: "45%" }} >
-                            <div htmlFor="Phone" className={classes.eachtitle} style={{ paddingBottom: 5 }}>Phone Number</div>
-                            <input
-                                className={classes.setrow}
-                                placeholder="Phone Number"
-                                type="text"
-                                //name="Phone Number"
-                                style={{ position: "absolute", width: "48.5%" }}
-                                onChange={(event) => {
-                                    setPhone(event.target.value);
-                                }} />
-                        </div>
+                        <div style={{ display: "flex" }} className={classes.setwidth2}>
+                            <div style={{ width: "45%" }} >
+                                <div htmlFor="Phone" className={classes.eachtitle} style={{ paddingBottom: 5 }}>Phone Number</div>
+                                    <input
+                                        className={classes.setrow}
+                                        placeholder="Phone Number"
+                                        type="text"
+                                        style={{ position: "absolute", width: "48.5%" }}
+                                            onChange={(event) => {
+                                            setPhone(event.target.value);
+                                    }} />
+                                </div>
                         
                         <div style={{ width: "45%" }}>
                             <div htmlFor="lastName" className={classes.eachtitle} style={{ paddingLeft: "46px", paddingBottom: 5 }}>Email</div>
-                            <input
-                                className={classes.setrow}
-                                placeholder="Email"
-                                type="text"
-                                style={{ position: "absolute", width: "48.5%", left: 345 }}
-
-                                //name="lastName"
-                                onChange={(event) => {
-                                    setEmail(event.target.value);
+                                <input
+                                    className={classes.setrow}
+                                    placeholder="Email"
+                                    type="text"
+                                    style={{ position: "absolute", width: "48.5%", left: 345 }}
+                                        onChange={(event) => {
+                                        setEmail(event.target.value);
                                 }} />
+                            </div>
                         </div>
-                    </div>
 
-                    <Button
-                        className={classes.buttonsubmit}
-                        variant="contained" color="primary" disableElevation
-                        onClick={Buildingsave}
-                        style={{ backgroundColor: '#485D84' }} >
-                        Save
-                    </Button>
-
+                        <Button className={classes.buttonsubmit} variant="contained" color="primary" disableElevation 
+                                onClick={Buildingsave}
+                                style={{ backgroundColor: '#485D84' }} >
+                            Save
+                        </Button>
                 </div>
-
             </div>
-
-
         </div>
     )
 }

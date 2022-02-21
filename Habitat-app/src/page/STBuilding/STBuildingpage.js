@@ -6,10 +6,7 @@ import axios from 'axios';
 import Cardsection from './Cardsection';
 import { ScrollView } from 'react-native';
 import CircularProgress from '@mui/material/CircularProgress';
-
 import { Redirect } from 'react-router-dom';
-
-
 
 const useStyles = makeStyles((theme) => ({
     frame: {
@@ -87,8 +84,6 @@ const useStyles = makeStyles((theme) => ({
             height: "31.5px"
         },
     },
-
-
 }));
 
 export default function STBuildingpage({ isOpened, props }) {
@@ -103,8 +98,7 @@ export default function STBuildingpage({ isOpened, props }) {
             .then(response => {
                 console.log(response.data)
                 setBuilding(response.data);
-                setIsbuilding(true);
-                
+                setIsbuilding(true);            
             })
             .catch(error => {
                 console.log('Error getting fake data: ' + error);
@@ -116,20 +110,16 @@ export default function STBuildingpage({ isOpened, props }) {
         // return(
         //     <Link to='/setting2' />
         // )
-
     }, [nowId])
-    
-   
+
     return (
         <div style={{ width: '100%' }}>
-
             <div className={isOpened ? classes.scrollspace36 : classes.scrollspace}>
                 <div className={classes.allfame}>
                     <div className={classes.fametop}>
                         <div style={{ display: "flex", paddingTop: "52px" }}>
                             <div className={classes.title}>
-                            Building
-                              
+                                Building 
                             </div>
                             <div style={{ width: "41px" }} />
                             <Link to='/addbuilding' style={{ textDecoration: "none" }}>
@@ -138,7 +128,6 @@ export default function STBuildingpage({ isOpened, props }) {
                                 </Button>
                             </Link>
                         </div>
-
                     </div>
 
                     <div className={classes.frame} style={{ display: "flex", flexWrap: 'wrap', paddingLeft: 59, paddingTop: 48.54 }}>
@@ -162,26 +151,20 @@ export default function STBuildingpage({ isOpened, props }) {
                                              </Link> 
                                         }
                                         Edit={
-
                                             <Link to={`editbuilding_sp/${value.id}`}
                                                 style={{ textDecoration: "none" }}>
                                                 <Button variant="outlined" className={classes.buttontop3} >
                                               Edit
                                             </Button>
-
                                             </Link>
-
                                         }
                                     />
                                 ))}
                             </div>
-
                         </ScrollView>
                     </div>
                 </div>
             </div>
         </div>
-
     )
-
 }
