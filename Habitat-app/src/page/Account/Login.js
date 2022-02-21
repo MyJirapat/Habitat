@@ -44,76 +44,69 @@ const useStyles = makeStyles((theme) => ({
 
 function Login(props){
   const classes = useStyles();
-  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const Login = event => {
     event.preventDefault();
-    Axios.post("/staff/login", {
-      "username": username,
-      "password": password,
-    }).then ( (response)=>{
-      //window.location.href = '/building_sp';
-      props.isLog(false)
-      
-      console.log(response);
-      
+      Axios.post("/staff/login", {
+        "username": username,
+        "password": password,
+          }).then ( (response)=>{
+        //window.location.href = '/building_sp';
+          props.isLog(false)
+          console.log(response);  
     })
 };
    return (
-        <div className="wrappers">
-          <div className="container-fruid">
-            <Paper className={classes.paper}>
+    <div className="wrappers">
+      <div className="container-fruid">
+          <Paper className={classes.paper}>
             <Typography component="h1" variant="h5">
-          <h2 style={{ color: '#485D84' }} > Habitat </h2>
-          <p className={classes.Move} style={{ color: '#485D84'}}>Residence hall</p>
-         </Typography>
-                <div className="forms">
-              <div className="email">
-                  <input
-                   type="text"
-                    placeholder="Username"
-                    onChange={(event)=>{
-                    setUsername(event.target.value);
+              <h2 style={{ color: '#485D84' }} > Habitat </h2>
+              <p className={classes.Move} style={{ color: '#485D84'}}>Residence hall</p>
+            </Typography>
+              <div className="forms">
+                  <div className="email">
+                      <input
+                          type="text"
+                          placeholder="Username"
+                          onChange={(event)=>{
+                          setUsername(event.target.value);
                   }}         
                 />     
               </div>
-              <div className="email">
-                  <input
-                  type="password"
-                    placeholder="Password"
-                    onChange={(event)=>{
-                    setPassword(event.target.value);
-                  }}            
+                  <div className="email">
+                      <input
+                        type="password"
+                        placeholder="Password"
+                        onChange={(event)=>{
+                        setPassword(event.target.value);
+                    }}            
                 />     
               </div>          
-                  <Button
-                      type="submit"   
-                       variant="contained" 
-                      onClick={Login}
-                            color="primary" disableElevation
-                            style={{ backgroundColor: '#485D84' }} 
-                            className={classes.fabButton}>                   
-                    Log In
+                  <Button className={classes.fabButton} type="submit" variant="contained" 
+                          onClick={Login} color="primary" disableElevation
+                          style={{ backgroundColor: '#485D84' }} 
+                          >                   
+                         Log In
                   </Button>
                   <br/>
                   <br/>
                   <br/>
-                 
                   <NavLink to="/registration" style={{ textDecoration: 'none' }}> 
-                  <Button   
-                      variant="contained" 
-                      disableElevation 
+                    <Button   
+                        variant="contained" 
+                        disableElevation 
                             style={{ backgroundColor: '#E4F0FE' }} 
                             className={classes.fabButton}>                   
-                    Create 
-                  </Button>
-                  </NavLink>
+                        Create 
+                      </Button>
+                    </NavLink>
                   </div>
-          </Paper>
+             </Paper>
           </div>
-        </div>         
-      );
+      </div>         
+    );
   } 
  export default Login;

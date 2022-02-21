@@ -164,7 +164,6 @@ function confirmPassword(event) {
     setConfirmPass("password dont match");
   }
 }
-
    return(
        <div className="wrappers">
        <Paper className={classes.paper}>
@@ -186,37 +185,29 @@ function confirmPassword(event) {
              </Grid>
            <Grid container spacing={2}>   
              <Grid item xs={12} sm={6}>
-              <div className="firstName">
-                 <input
-                      placeholder="First Name"
-                      type="text"
-                      //name="firstName"
-                      onChange={(event)=> {
-                        setFirstname(event.target.value);
-                        }}             
+                <div className="firstName">
+                   <input placeholder="First Name" type="text"
+                        onChange={(event)=> {
+                          setFirstname(event.target.value);
+                    }}             
                     />
-                  </div>
+                </div>
              </Grid>
 
              <Grid item xs={10} sm={6}>
-             <div className="firstName">
-                    <input
-                      placeholder="Last Name"
-                      type="text" 
+                <div className="firstName">
+                    <input placeholder="Last Name" type="text" 
                       onChange={(event)=> {
                         setLastname(event.target.value);
                         }}    
-                  />
+                      />
                   </div>
                 
               
              </Grid>
              <Grid item xs={12} sm={6}>
-             <div className="firstName">
-                    <input
-                      placeholder="First Name"
-                      type="Date"
-                      //name="firstName"
+                <div className="firstName">
+                    <input placeholder="First Name" type="Date"
                       onChange={(event)=> {
                         setBirthDate(event.target.value);
                       }}     
@@ -224,8 +215,7 @@ function confirmPassword(event) {
                     </div>
              </Grid>
              <Grid item xs={12} sm={6}>
-             <div >
-         
+             <div>
                <select className="gen">
                     {/*<input  
                       placeholder="Gender"
@@ -241,36 +231,27 @@ function confirmPassword(event) {
              </Grid>
             
              <Grid item xs={12} sm={6}>
-             <div className="firstName">
-                    <input  
-                      placeholder="Email"
-                      type="text"  
+                <div className="firstName">
+                    <input placeholder="Email"type="text"  
                       onChange={(event)=> {
                         setEmail(event.target.value);
-                      }}
-                             
+                      }}       
                  />
               </div>
              </Grid>
-
              <Grid item xs={12} sm={6}>
-             <div className="firstName">
-                    <input  
-                      placeholder="Phone number"
-                      type="text"  
+                <div className="firstName">
+                    <input placeholder="Phone number" type="text"  
                       onChange={(event)=> {
                         setPhoneNo(event.target.value);
-                      }}
-                             
+                      }}    
                  />
               </div>
              </Grid>
 
              <Grid item xs={12}>
-             <div className="firstName">
-                  <input
-                    placeholder="Username"
-                    type="text"     
+                <div className="firstName">
+                  <input placeholder="Username"type="text"     
                     onChange={(event)=> {
                       setUsername(event.target.value);
                     }}
@@ -278,12 +259,10 @@ function confirmPassword(event) {
                 />     
               </div>
              </Grid>
-
+             
              <Grid item xs={12} sm={6}>
-             <div className="firstName">
-                    <input  
-                      placeholder="Password"
-                      type="password"
+                <div className="firstName">
+                    <input placeholder="Password" type="password"
                       onChange={(event)=> {
                         setPassword(event.target.value);
                       }}/>
@@ -291,30 +270,21 @@ function confirmPassword(event) {
              </Grid>
 
              <Grid item xs={12} sm={6}>
-             <div className="firstName">
-                    <input  
-                      placeholder="Confirm Password"
-                      type="password"
+                <div className="firstName">
+                    <input placeholder="Confirm Password" type="password"
                       onChange={confirmPassword}
                     />
                       <h6> {confirmPass} </h6>
-                    </div>
-                  
+                    </div>   
              </Grid>      
            </Grid>
            <br/>
-
-           <Button 
-                type="submit" variant="contained" 
-                color="primary" disableElevation
-                style={{ backgroundColor: '#485D84' }} 
-                className={classes.fabButton}>                   
-                    Sign Up
-          </Button>
+              <Button type="submit" variant="contained" color="primary" disableElevation style={{ backgroundColor: '#485D84' }} className={classes.fabButton}>                   
+                  Sign Up
+              </Button>
          </form>
          </Paper>
-         </div>
- 
+    </div>
    );
  }
 
