@@ -16,7 +16,6 @@ import Card from '@material-ui/core/Card';
 import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
 import Axios from "axios";
-
 import Nav from 'react-bootstrap/Nav'
 import { useParams } from 'react-router';
 
@@ -57,14 +56,10 @@ const useStyles = makeStyles({
         position: "absolute",
         margin: "30%",
 
-
-
         '&:hover': {
             backgroundColor: '#687690',
             color: '#fff',
         },
-
-
     },
     settingpaper: {
         position: "relative",
@@ -132,8 +127,6 @@ const useStyles = makeStyles({
         marginTop: 60
 
     },
-
-    //segment
 
     segmentbtnBlue: {
         width: 161.8,
@@ -226,10 +219,8 @@ const useStyles = makeStyles({
 
 export default function Settingpage({ isOpened, props }) {
     const classes = useStyles();
-
     const { id } = useParams()
     const [promptPay, setPromptPay] = React.useState("");
-
     const [eWallet, setEWallet] = React.useState("");
     const [open, setOpen] = React.useState(false);
 
@@ -279,8 +270,6 @@ export default function Settingpage({ isOpened, props }) {
     useEffect(() => {
         Axios.get(`/bankaccount/e-wallet/${id}`)
             .then(response => {
-
-
                 const { data } = response;
                 setEWallet(data[0].eWallet)
             })
@@ -292,7 +281,6 @@ export default function Settingpage({ isOpened, props }) {
     useEffect(() => {
         Axios(`/bankaccount/promptpay/${id}`)
             .then(response => {
-
                 const { data } = response;
                 setPromptPay(data[0].promptPay);
             })
@@ -303,28 +291,21 @@ export default function Settingpage({ isOpened, props }) {
 
 
     const [currentSelect, setCurrentSelect] = useState(0)
-
     return (
         <div style={{ width: '100%' }}>
-
             <div className={isOpened ? classes.scrollspace36 : classes.scrollspace}>
-
                 <div className={classes.settingpaper}>
-
                     <div className={classes.topicsetup}>
                         Setting
                     </div>
-
-
                     <div className={classes.incontainer}>
-
                         <div className={classes.mdcolum}>
                             <div style={{ height: " 47px" }} />
-                            <Link to='/building_sp' style={{ textDecoration: "none" }}>
-                                <div>
-                                    <div className="circletext inline item marleft">
-                                        1
-                                    </div>
+                                <Link to='/building_sp' style={{ textDecoration: "none" }}>
+                                    <div>
+                                        <div className="circletext inline item marleft">
+                                            1
+                                        </div>
                                     <div>
                                         <div className={classes.textsetting}>
                                             Building
@@ -337,7 +318,6 @@ export default function Settingpage({ isOpened, props }) {
                             </Link>
 
                             <div style={{ height: " 50px" }} />
-
                             <Link to={`/stCreateFloor/${id}`} style={{ textDecoration: "none" }}>
                                 <div>
                                     <div className="circletext inline item marleft">
@@ -356,7 +336,6 @@ export default function Settingpage({ isOpened, props }) {
 
                             <div style={{ height: " 50px" }} />
                             <Link to={`/settingroom/${id}`} style={{ textDecoration: "none" }}>
-
                                 <div>
                                     <div className="circletext inline item marleft">
                                         3
@@ -370,15 +349,11 @@ export default function Settingpage({ isOpened, props }) {
                                             Manage and set up room
                                         </div>
                                     </div>
-
                                 </div>
-
                             </Link>
 
                             <div style={{ height: " 50px" }} />
-
                             <Link to={`/roomtype_sp/${id}`} style={{ textDecoration: "none" }}>
-
                                 <div>
                                     <div className="circletext inline item marleft">
                                         4
@@ -398,7 +373,6 @@ export default function Settingpage({ isOpened, props }) {
                         <div className={classes.mdblue}>
                             <div style={{ height: " 47px" }} />
                             <Link to={`/feetype_sp/${id}`} style={{ textDecoration: "none" }}>
-
                                 <div>
                                     <div className="circletext inline item marleft">
                                         5
@@ -451,9 +425,7 @@ export default function Settingpage({ isOpened, props }) {
                             </Link>
 
                             <div style={{ height: " 50px" }} />
-
                             <Link to={`/st_initialize/${id}`} style={{ textDecoration: "none" }}>
-
                                 <div>
                                     <div className="circletext inline item marleft">
                                         8
@@ -468,13 +440,10 @@ export default function Settingpage({ isOpened, props }) {
                                         <div className={classes.subtext} style={{ position: "absolute", right: 189 }}>
                                             in each line
                                         </div>
-
                                     </div>
                                 </div>
                             </Link>
-
                         </div>
-
                     </div>
 
                     <Link to={`/stCreateFloor/${id}`}>
@@ -499,21 +468,16 @@ export default function Settingpage({ isOpened, props }) {
                                 <div className={classes.segwrap} style={{ position: 'relative', border: '0.75px solid #AAAAAA' }}>
                                     <div className={currentSelect == 1 ? classes.segmentbtnWhite : classes.segmentbtnBlue}
                                         onClick={() => setCurrentSelect(0)}>
-
                                         <text className={classes.makeCenter}>
                                             Prompt pay
                                         </text>
-
                                     </div>
 
                                     <div className={currentSelect == 1 ? classes.segmentbtnBlue : classes.segmentbtnWhite} onClick={() => setCurrentSelect(1)}>
-
                                         <text className={classes.makeCenter}>
                                             E-wallet
                                         </text>
-
                                     </div>
-
                                 </div>
 
                                 <div style={{ position: 'absolute', bottom: 140 }}>
@@ -523,9 +487,7 @@ export default function Settingpage({ isOpened, props }) {
                                     <input className={classes.input_md} style={{ position: 'absolute', bottom: 100 }}
                                         value={promptPay}
                                         onChange={(event) => {
-
                                             setPromptPay(event.target.value)
-
                                         }
                                         }
                                     >
@@ -537,7 +499,6 @@ export default function Settingpage({ isOpened, props }) {
                                     <input className={classes.input_md} style={{ position: 'absolute', bottom: 100 }}
                                         value={eWallet}
                                         onChange={(event) => {
-
                                             setEWallet(event.target.value)
 
                                         }
@@ -558,11 +519,7 @@ export default function Settingpage({ isOpened, props }) {
                                         Cancel
                                     </Button>
                                 </div>
-
-
                             </div>
-
-
 
                             {/* <Tabs
                                 defaultActiveKey="home"

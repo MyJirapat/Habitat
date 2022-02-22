@@ -85,38 +85,28 @@ export default function Roompage({ isOpened }) {
     const [numPeople, setNumPeople] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [isLoadingLV1, setIsLoadingLV1] = useState(false)
-
     const [currentBuilding, setCurrentBuilding] = useState("")
     const [search, setSearch] = useState("")
     const [floorUrl, setFloorUrl] = useState(`/dropdown/floors/${currentBuilding}`)
 
-
-
     // const floorUrl = `/building/floors/${currentBuilding}`
-
     useEffect(() => {
         axios(`/room/room-beds/${currentBuilding}`)
             .then(response => {
                 console.log(response.data)
                 numWholive()
-
                 setAllFloor(response.data);
                 // setFloorUrl(`/dropdown/floors/Great`)
-
             })
             .catch(error => {
                 console.log('Error getting fake data: ' + error);
             })
     });
 
-    
-   
-
-
     function numWholive() {
         var a = 0
         var b = 0
-
+        
         for (var i = 0; i < allFloor.length; i++) {
             console.log(`floor ${i}`)
             for (var j = 0; j < allFloor[i].rooms.length; j++) {
@@ -133,15 +123,12 @@ export default function Roompage({ isOpened }) {
         console.log("End")
         setIsLoading(true)
         setNumPeople(numPeople)
-
     }
 
-    
     return (
         <ScrollView>
             <div className={isOpened ? classes.scrollspace36 : classes.scrollspace}>
                 <div>
-
                     <div className={classes.frame}>
                         <Datetoday />
                         {/* <Button  style={{backgroundColor: 'blue'}} onClick={() => props.isOpened('Anna')}/> */}
@@ -150,7 +137,6 @@ export default function Roompage({ isOpened }) {
                         </div>
 
                         <div style={{ display: "flex", position: "absolute", bottom: 70, width: '100%' }}>
-
                             <div style={{ position: 'relative', width: 161 }}>
                                 <div className={classes.textDrop}>
                                     Search
@@ -167,37 +153,29 @@ export default function Roompage({ isOpened }) {
                             </div>
 
                             <div style={{ width: 12 }} />
-
-                            <div>
-                                <div className={classes.textDrop}>
-                                    Building
-                                </div>
+                                <div>
+                                    <div className={classes.textDrop}>
+                                        Building
+                                    </div>
                                 <div style={{ height: 4 }} />
-
-                                <DropBuilding
-                                    save={currentBuilding => setCurrentBuilding(currentBuilding)}
-                                />
-
-                            </div>
+                                    <DropBuilding
+                                        save={currentBuilding => setCurrentBuilding(currentBuilding)}
+                                    />
+                                </div>
 
                             <div style={{ width: 12 }} />
-
                             {/*<div>
                                 <div className={classes.textDrop}>
                                     Floor
                                 </div>
                                 <div style={{ height: 4 }} />
-
                                 <DropFloor
                                     url={floorUrl}
                                     // save={currentFloor => setCurrentFloor(currentFloor)}
                                 />
-            
                             </div>*/}
 
                             <div style={{ width: 12 }} />
-
-
                             {/* <div>
                                 <div className={classes.textDrop}>
                                     Status
@@ -207,9 +185,6 @@ export default function Roompage({ isOpened }) {
                             </div> */}
 
                             <div style={{ width: 12 }} />
-
-
-
                             {/* <div style={{ position: 'absolute', right: 0, top: 28 }}>
                                 <Button className={classes.buttontop} >
                                     Search
@@ -218,7 +193,7 @@ export default function Roompage({ isOpened }) {
                         </div>
 
                         <div className={classes.titleText} style={{ position: 'absolute', bottom: 0 }}>
-                        {currentBuilding}
+                            {currentBuilding}
                         </div>
                     </div>
 
@@ -226,8 +201,7 @@ export default function Roompage({ isOpened }) {
                         <div style={{ height: 20 }} />
                         {isLoading &&
                             allFloor.filter(val => {
-                                if (search == '') {
-                                  
+                                if (search == '') { 
                                     return val;
                                 } else if (
                                     // val.roomNumber.toLowerCase().includes(search.toLowerCase())
@@ -240,18 +214,14 @@ export default function Roompage({ isOpened }) {
                                     return val.rooms[0]
                                 }
                             }).map((item, index) => (
-
                                 <Floorsection
-
                                     floorName={item.floorName}
                                     allFloor={allFloor[index].rooms}
                                     numBed={numBed[index]}
                                     numPeople={numPeople[index]}
                                     
                                 />
-
                             ))
-
                         }
 
                     </div>
