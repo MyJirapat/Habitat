@@ -186,7 +186,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Verifypage({ isOpened }) {
     const classes = useStyles();
-
     const [currentSelect, setCurrentSelect] = useState(0)
     const [allData, setAllData] = useState([])
     const [allTransaction, setAllTransaction] = useState([])
@@ -195,7 +194,6 @@ export default function Verifypage({ isOpened }) {
 
     useEffect(async () => {
         console.log("in Use Eff first row")
-
         await axios(`/rentingtransaction/verify-expenses/${id}`)
             .then(response => {
                 console.log(response.data, "in response")
@@ -212,10 +210,8 @@ export default function Verifypage({ isOpened }) {
     function getAlltrans(data) {
         // setAllTransaction([])
         for (var i = 0; i < data.floors.length; i++) {
-
             for (var j = 0; j < data.floors[i].rooms.length; j++) {
                 for (var e = 0; e < data.floors[i].rooms[j].userRentingTransactionIds.length; e++) {
-
                     allTransaction.push(data.floors[i].rooms[j].userRentingTransactionIds[e])
                     console.log("i sus " + data.floors[i].rooms[j].userRentingTransactionIds[e])
                 }
@@ -230,10 +226,8 @@ export default function Verifypage({ isOpened }) {
     }
 
     const sureVeuify = async () => {
-
         console.log("all trans" + allTransaction)
         console.log("all transs"+rentTrans)
-
         let res = await axios({
             url: `/rentingtransaction/verify-electricity-water-expenses`,
             method: 'post',
@@ -249,20 +243,15 @@ export default function Verifypage({ isOpened }) {
             console.log(response)
             console.log(allTransaction)
             console.log("postsuccess")
-
             // window.location.href = `/feetype_sp/${id}`;
         })
             .catch(error => {
                 alert("post fail")
                 console.log('Error getting fake data: ' + error);
             })
-
     }
 
-
-
     // https://habitat1.azurewebsites.net/api/v1/rentingtransaction/electricity-water-expenses/4
-
     return (
         <div style={{ width: '100%' }}>
             <ScrollView>
@@ -277,11 +266,9 @@ export default function Verifypage({ isOpened }) {
                             <div className={classes.segwrap} style={{ position: 'absolute', top: 101 }}>
                                 <div className={currentSelect == 0 ? classes.segmentbtnBlue : classes.segmentbtnWhite}
                                     onClick={() => setCurrentSelect(0)}>
-
                                     <text className={classes.makeCenter}>
                                         Electricity
                                     </text>
-
                                 </div>
 
                                 <div className={currentSelect == 1 ? classes.segmentbtnBlue : classes.segmentbtnWhite} onClick={() => setCurrentSelect(1)}>
@@ -289,7 +276,6 @@ export default function Verifypage({ isOpened }) {
                                         Water
                                     </text>
                                 </div>
-
                             </div>
 
                             <div className={classes.title2bl}>
@@ -304,7 +290,6 @@ export default function Verifypage({ isOpened }) {
                                         {allData.length > 0 ? allData[0].buildingName : ""}
                                     </div>
                                 </div>
-
                             </div>
                         </div>
 
@@ -314,11 +299,8 @@ export default function Verifypage({ isOpened }) {
                                     return (
                                         <Paper className={classes.papercard}>
                                             <div className={classes.headfloor} >
-
                                                 Floor {floor.floorName}
-
                                                 <div style={{ position: 'absolute', paddingTop: '6px' }}>
-
                                                     <text className={classes.floortext}>
                                                         Room
                                                     </text>
@@ -342,7 +324,6 @@ export default function Verifypage({ isOpened }) {
                                                     <text >
                                                         Usage
                                                     </text>
-
                                                 </div>
                                             </div>
 
@@ -368,7 +349,6 @@ export default function Verifypage({ isOpened }) {
                                                             {/* 27/04/2021 */}
                                                             {/* {room.previousDate} */}
                                                             {/* {moment(room.previousDate.replace(/[^a-zA-Z0-9]/g, "")).format("L")} */}
-
                                                             {/* {moment(room.previousDate).format("DD/MM/YYYY")} */}
                                                             {room.isBedAvailable[0] == false ?
                                                                 moment(room.previousDate).format("DD/MM/YYYY")
@@ -406,7 +386,6 @@ export default function Verifypage({ isOpened }) {
                                                 )
                                             })}
                                             {/* <Roomcard /> */}
-
                                         </Paper>
                                     )
                                 })

@@ -12,8 +12,6 @@ import Grid from '@material-ui/core/Grid';
 import Roomcard from "../../Components/Room/Roomcard";
 import Card from '@material-ui/core/Card';
 
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
@@ -42,7 +40,6 @@ export default function StickyHeadTable() {
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
-
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
