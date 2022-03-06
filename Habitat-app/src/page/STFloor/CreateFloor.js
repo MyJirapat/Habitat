@@ -154,8 +154,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#4A4A4A',
         position: 'absolute'
     },
-
-    //input
+    
     inputSize: {
         height: 31.5,
         width: 189,
@@ -180,7 +179,7 @@ const useStyles = makeStyles((theme) => ({
         textTransform: 'none'
 
     },
-    //button
+
     buttonDelete: {
         width: 28,
         height: 28,
@@ -189,8 +188,6 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative'
     },
 
-
-    //decor
     decorLeftRight: {
         width: 41
     },
@@ -207,9 +204,6 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
         top: 3
     }
-
-
-
 }));
 
 
@@ -217,11 +211,9 @@ export default function CreateFloor(props) {
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
     const [previous, setPrevious] = useState({});
-
     const [inputfloorToAdd, setInputfloorToAdd] = useState(null)
     const [committedfloorToAdd, setCommittedFloorToAdd] = useState([]);
     const [numOfFloor, setNumOfFloor] = useState(0)
-
     const [keptSample, setKeptSample] = useState([])
     const [isLoading, setLoading] = useState(true)
     const { id } = useParams()
@@ -230,7 +222,6 @@ export default function CreateFloor(props) {
     }
 
     const [buildingName, setBuildName] = useState([])
-
     useEffect(async () => {
         console.log(id + "in Use Eff first row")
         await axios(`/building/building/id/${id}`)
@@ -242,7 +233,6 @@ export default function CreateFloor(props) {
                 console.log('Error getting fake data: ' + error);
             })
 
-        
         await axios(`/building/floors/${id}`)
             .then(response => {
                 setNumOfFloor(response.data)
@@ -256,15 +246,10 @@ export default function CreateFloor(props) {
 
     }, []);
 
-
-
     function habdlerClick() {
-        
         console.log("This all floor" + inputfloorToAdd)
         setCommittedFloorToAdd(inputfloorToAdd);
-
         console.log(numOfFloor.length)
-
         if(numOfFloor.length > 0) {
             const recentFloor = numOfFloor[numOfFloor.length-1].floorNumber
 
@@ -306,9 +291,6 @@ export default function CreateFloor(props) {
         }
     }
 
-
-    
-
     const deleteHandler = (index) => {
         // Assuming that the index means the index of an item which is to be deleted.
         const newList = keptSample.filter((item) => keptSample.indexOf(item) !== index);
@@ -323,26 +305,17 @@ export default function CreateFloor(props) {
         setKeptSample(keptSample)
     }
 
-   
     return isLoading == false && (
         <div style={{ width: '100%' }}>
             <ScrollView>
                 <div style={{ position: 'relative', margin: 'auto' }}>
                     <div className="container" style={{ position: 'relative', margin: 'auto' }}>
                         <div style={{ width: '100%', height: '650px' }}>
-
-
                             <div className={classes.mainFame}>
-
                                 <div className={classes.mainFameHeader}>
-
                                     <div className={classes.title} >
                                         Floors
                                     </div>
-                                    {/* <button onClick={() => console.log(arrayFloor)}>
-
-</button> */}
-
                                     <div style={{
                                         display: 'flex', right: 0, position: 'absolute', top: 26.6,
                                         right: 42
@@ -356,7 +329,6 @@ export default function CreateFloor(props) {
                                         />
 
                                         <div className={classes.grabWidth} />
-
                                         <Button className={classes.submitHeadNumBt}
                                             size="small" variant="contained" color="primary" disableElevation
                                             style={{ backgroundColor: '#485D84' }}
@@ -365,13 +337,10 @@ export default function CreateFloor(props) {
                                             }
                                         >Generate</Button>
                                     </div>
-
-
                                 </div>
+
                                 <div style={{ height: 30 }}></div>
-
                                 <div className={classes.wrapfame} >
-
                                     <div className={classes.inFame}>
                                         <div className={classes.inFameHeader} style={{ position: 'relative' }}>
                                             <div className={classes.title2} style={{ position: 'relative', marginLeft: 41, marginTop: 10 }}>
@@ -399,42 +368,31 @@ export default function CreateFloor(props) {
                                         </div>
 
                                         {keptSample.map((value, index) => (
-
-
                                             <div className={classes.rominfame} style={{ borderBottom: '0.75px solid #AAAAAA' }}>
                                                 <div style={{ display: 'flex' }}>
                                                     <div className={classes.title5} style={{ left: 50, top: 18 }} numfloor={`floor${index}`}>
                                                         {index + 1}
                                                     </div>
                                                     <input className={classes.inputSize} style={{ position: 'absolute', left: 206, top: 12 }}
-                                                        placeholder="Number of Room" placeholder={index + 1} onChange={e => value.FloorName = e.target.value} />
+                                                        placeholder="Number of Room" placholder={index + 1} onChange={e => value.FloorName = e.target.value} />
 
                                                     <div className={classes.buttonDelete} style={{ right: 48, top: 14, position: 'absolute' }}>
                                                         <DeleteIcon style={{ color: '#4A4A4A', position: 'absolute', width: 16, height: 16, top: 6, right: 6 }} 
                                                         onClick={() => deleteHandler(index)}/>
                                                     </div>
-             
                                                     {/* <input className={classes.inputSize} style={{ top: 12, marginLeft: 206 }}
-                                                        onChange={e => room.room_number = e.target.value}
-
-                                                    >
-
+                                                        onChange={e => room.room_number = e.target.value}>
                                                     </input>
                                                     <div className={classes.buttonDelete} style={{ right: 44, top: 14 }}>
                                                         <DeleteIcon style={{ color: '#4A4A4A', position: 'absolute', width: 16, height: 16, top: 6, right: 6 }} />
                                                     </div> */}
                                                 </div>
                                             </div>
-
                                         ))}
-
                                         {/* {keptSample != undefined && keptSample.length > 0 ? keptSample.map((value, index) => {
                                             return (
                                                 <div className={classes.inFame} style={{ marginBottom: 17.7 }}>
                                                     {/* //linedivider */}
-
-
-
                                         {/* {floor.Rooms.map((room, index) => {
                                                     { console.log('im here') }
                                                     return (
@@ -456,110 +414,19 @@ export default function CreateFloor(props) {
                                                         </div>
                                                     )
                                                 })} 
-
                                                 </div>
                                             )
                                         }) : ""} */}
                                     </div>
-
-
-
                                 </div>
-
-
-                                {/* <Table aria-label="caption table">
-
-                                    <TableCell className={classes.heder}>
-                                        <div className="row">
-                                            <div className="col">
-                                                <h4>Floor</h4>
-                                            </div>
-
-
-                                            <div className="col-md-3">
-                                                <input
-                                                    className={classes.inputHeadNumbox}
-                                                    placeholder="No of Floor2"
-                                                    type="number"
-                                                    value={inputfloorToAdd}
-                                                    onChange={(e) => setInputfloorToAdd(parseInt(e.currentTarget.value))}
-                                                />
-                                            </div>
-
-                                            <div className="col-md-3">
-                                                <Button className={classes.submitHeadNumBt}
-                                                    size="small" variant="contained" color="primary" disableElevation
-                                                    style={{ backgroundColor: '#485D84' }}
-                                                    onClick={() => {
-                                                        habdlerClick()
-                                                    }}>Generate Floor</Button>
-                                            </div>
-                                        </div>
-
-                                    </TableCell>
-
-                                    <TableBody>
-                                        <br />
-
-                                        <div className="container ">
-                                            <Card className={classes.Cards} variant="outlined">
-                                                <Table >
-                                                    <TableHead >
-                                                        <h5 className={classes.heder}>{buildingName}</h5>
-                                                        <TableRow>
-                                                            <TableCell align="left">Floor</TableCell>
-                                                            <TableCell align="center">Edit Name Floor</TableCell>
-                                                            <TableCell align="right" >Delete</TableCell>
-                                                        </TableRow>
-                                                    </TableHead>
-
-                                                    {keptSample.map((value, index) => (
-
-                                                        <TableBody>
-                                                            <TableRow>
-                                                                <TableCell align="left" numfloor={`floor${index}`}>
-                                                                    {index + 1}
-                                                                </TableCell>
-
-                                                                <TableCell align="center">
-                                                                    <input placeholder="Number of Room" placeholder={index + 1} onChange={e => value.FloorName = e.target.value} />
-                                                                </TableCell>
-
-
-
-                                                                <TableCell align="left">
-                                                                    <Button onClick={() => deleteItem(index)}> <DeleteSweepOutlinedIcon /></Button>
-
-                                                                </TableCell>
-                                                            </TableRow>
-                                                        </TableBody>
-                                                    ))}
-                                                </Table>
-
-
-                                                <div className="container-fruid ">
-                                                    <NavLink to='/setting'>
-                                                        <Button >
-                                                        </Button>
-                                                    </NavLink>
-                                                </div>
-                                            </Card>
-                                        </div>
-                                    </TableBody>
-                                </Table> */}
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
-
 
             </ScrollView>
             <div style={{ position: 'absolute', width: '100%', height: 200, top: 600 }}>
                 <Link to={`/settingroom/${id}`} onClick={() => props.keptArray(keptSample)}>
-
                     <Button
                         style={{
                             backgroundColor: "#485D84", width: 406,
@@ -568,20 +435,13 @@ export default function CreateFloor(props) {
                         }}>
                         Next
                     </Button>
-
                     <div style={{
                         backgroundColor: '#385CA8', opacity: 0.5
                         , width: "100%", height: 200, position: 'relative'
                     }}>
-
                     </div>
-
                 </Link>
-
-
             </div>
         </div>
-
     );
-
 }

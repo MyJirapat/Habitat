@@ -7,9 +7,7 @@ import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import { Alert, ScrollView } from 'react-native';
 
-
 const useStyles = makeStyles((theme) => ({
-    //fame
     mainFame: {
         width: 755,
         minHeight: 721,
@@ -17,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         border: '0.75px solid #AAAAAA',
         borderRadius: 5,
-        // flexWrap: 'wrap'
 
     },
     mainFameHeader: {
@@ -39,20 +36,19 @@ const useStyles = makeStyles((theme) => ({
         borderBottom: '0.75px solid #AAAAAA',
 
     },
-    //row in fame
     rominfame: {
         width: '100%',
         height: 55,
         position: 'relative'
+
     },
-    //wrap infame
     wrapfame: {
         width: 605,
         minHeight: 360,
         margin: 'auto',
         position: 'relative'
+
     },
-    //text
     title: {
         fontSize: '22.6px',
         color: '#4A4A4A',
@@ -60,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         top: 26.6,
         left: 42
+
     },
     title2: {
         fontSize: '19.4px',
@@ -88,9 +85,8 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '13px',
         color: '#4A4A4A',
         position: 'absolute'
-    },
 
-    //input
+    },
     inputSize: {
         height: 31.5,
         width: 189,
@@ -98,12 +94,13 @@ const useStyles = makeStyles((theme) => ({
         color: '#4A4A4A',
         position: 'relative',
         margin: 'auto'
-    },
 
+    },
     inputHeadNumbox: {
         width: 103.5,
         height: 31.5,
         fontSize: 13
+
     },
     submitHeadNumBt: {
         width: 103.5,
@@ -114,27 +111,22 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 400
 
     },
-    //button
     buttonDelete: {
         width: 28,
         height: 28,
         borderRadius: 14.1,
         backgroundColor: '#F8F8F8',
         position: 'relative'
+
     },
-
-
-    //decor
     decorLeftRight: {
         width: 41
-    },
 
+    },
     grabWidth: {
         width: 17.7
+
     }
-
-    
-
 }));
 
 export default function CreateRoomRe(props) {
@@ -143,10 +135,8 @@ export default function CreateRoomRe(props) {
     const [allroom, setAllroom] = useState([]);
     const [inputRoomToAdd, setInputRoomToAdd] = useState(null)
     const [arrayFloor, setArrayFloor] = useState(props.allFloor)
-
     const [getRoomName, setRoomName] = useState()
     const { id } = useParams()
-
     const [buildingName, setBuildName] = useState([])
 
     useEffect(async () => {
@@ -161,8 +151,6 @@ export default function CreateRoomRe(props) {
             .catch(error => {
                 console.log('Error getting fake data: ' + error);
             })
-
-
     }, []);
 
     // useEffect(() => {
@@ -177,11 +165,7 @@ export default function CreateRoomRe(props) {
     //         })
     //     console.log("In useeffect")
     // }, []);
-
-
-
     // building/floor-room/building/5
-
 
     const api = axios.create({
         baseURL: `/building/floor-room/building/${id}`
@@ -202,20 +186,15 @@ export default function CreateRoomRe(props) {
     
     function handlerClick() {
         const a = 100
-        // inputRoomToAdd
-        // allroom
         const roomObject = {
             "room_number": "101"
         }
         console.log(arrayFloor)
 
         for (var i = 0; i < arrayFloor.length; i++) {
-
             for (var j = 0; j < parseInt(inputRoomToAdd); j++) {
-                
                 const formattedNumber = ("0" + (j + 1)).slice(-2)
                 const roomNumber = String(arrayFloor[i].FloorName) + formattedNumber
-
                 const roomObject = {
                     "room_number": roomNumber
                 }
@@ -223,15 +202,11 @@ export default function CreateRoomRe(props) {
                 console.log(roomNumber)
             }
         }
-
         setArrayFloor(arrayFloor)
         console.log(arrayFloor)
-
         console.log("end")
         setInputRoomToAdd(0)
-
     }
-
     // const deleteHandler = (index) => {
     //     const newList = keptSample.filter((item) => keptSample.indexOf(item) !== index);
     //     console.log(newList)
@@ -241,79 +216,55 @@ export default function CreateRoomRe(props) {
     const deleteHandler = (indexfloor, indexroom) => {
         // Assuming that the index means the index of an item which is to be deleted.
         const newList = arrayFloor[indexfloor].Rooms.filter((item) => arrayFloor[indexfloor].Rooms.indexOf(item) !== indexroom);
-        console.log(newList)
-
-        arrayFloor[indexfloor].Rooms = newList
-        // setArrayFloor(newList);
-        console.log(arrayFloor)
-        setArrayFloor(arrayFloor);
-
-        // setArrayFloor(a)
-        // console.log(arrayFloor)
-
-        
+            console.log(newList)
+            arrayFloor[indexfloor].Rooms = newList
+            console.log(arrayFloor)
+                setArrayFloor(arrayFloor);        
     }
 
     return (
         <div style={{ width: '100%', height: "100%" }}>
             <ScrollView >
-
                 <div style={{ position: 'relative', top: 32.3, margin: 'auto', height: 800 }}>
-
                     <div className={classes.mainFame}>
-
                         <div className={classes.mainFameHeader}>
-
                             <div className={classes.title} >
                                 Rooms
                             </div>
                             {/* <button onClick={() => console.log(arrayFloor)}>
                             </button> */}
-
                             <div style={{
                                 display: 'flex', right: 0, position: 'absolute', top: 26.6,
                                 right: 42
                             }}>
                                 <input className={classes.inputHeadNumbox}
-                                    // style={{height: 10}}
                                     placeholder="No. of Room"
-                                    // type="number"
-                                    // value={inputfloorToAdd}
-                                    onChange={(e) => setInputRoomToAdd(parseInt(e.currentTarget.value))}
-                                />
+                                    onChange={(e) => setInputRoomToAdd(parseInt(e.currentTarget.value))}/>
 
                                 <div className={classes.grabWidth} />
-
-                                <Button className={classes.submitHeadNumBt}
-                                    size="small" variant="contained" color="primary" disableElevation
-                                    style={{ backgroundColor: '#485D84' }}
-                                    onClick={() =>
-                                        handlerClick()
-                                    }
-                                >Generate Room</Button>
+                                    <Button className={classes.submitHeadNumBt}
+                                        size="small" variant="contained" color="primary" disableElevation
+                                        style={{ backgroundColor: '#485D84' }}
+                                            onClick={() =>
+                                                 handlerClick()
+                                            }
+                                    >Generate Room</Button>
+                                </div>
                             </div>
 
-                        </div>
-
-
                         <div className={classes.wrapfame} >
-
                             <div style={{ position: 'relative', height: 41.4 }}>
                                 <div className={classes.title2} style={{ position: 'relative', top: 16.18 }}>
                                     {buildingName}
                                 </div>
                             </div>
-                            {/* map floor here*/}
                             {arrayFloor != undefined && arrayFloor.length > 0 ? arrayFloor.map((floor, indexfloor) => {
                                 return (
                                     <div className={classes.inFame} style={{ marginBottom: 17.7 }}>
-                                        {/* //linedivider */}
-
                                         <div className={classes.inFameHeader}>
                                             <div className={classes.title3} >
                                                 Floor {floor.FloorName}
                                             </div>
-                                            {/* display flex */}
                                             <div style={{ display: 'flex' }}>
                                                 <div className={classes.title4} style={{ left: 41 }}>
                                                     Room
@@ -327,21 +278,16 @@ export default function CreateRoomRe(props) {
                                             </div>
                                         </div>
 
-
                                         {floor.Rooms.map((room, indexroom) => {
                                             { console.log('im here') }
                                             return (
                                                 <div className={classes.rominfame} style={{borderBottom: '0.75px solid #AAAAAA'}}>
-                                                    {/* display flex */}
                                                     <div style={{ display: 'flex' }}>
                                                         <div className={classes.title5} style={{ left: 41, top: 18 }}>
                                                             {room.room_number}
                                                         </div>
                                                         <input className={classes.inputSize} style={{ top: 12, marginLeft: 206 }}
-                                                            onChange={e => room.room_number = e.target.value}
-
-                                                        >
-
+                                                            onChange={e => room.room_number = e.target.value}>
                                                         </input>
                                                         <div className={classes.buttonDelete} style={{ right: 44, top: 14 }}>
                                                             <DeleteIcon style={{ color: '#4A4A4A', position: 'absolute', width: 16, height: 16, top: 6, right: 6 }} 
@@ -351,24 +297,13 @@ export default function CreateRoomRe(props) {
                                                 </div>
                                             )
                                         }) }
-                                        {/* map room here */}
-
                                     </div>
                                 )
                             }) : ""}
-
                         </div>
-
-
-
-
                     </div>
                     <div style={{height: 200}}/>
-
                 </div>
-  
-  
-
             </ScrollView>
 
             <div style={{ position: 'absolute', width: '100%', height: 200, top: 600 }}>
@@ -384,11 +319,8 @@ export default function CreateRoomRe(props) {
                     backgroundColor: '#385CA8', opacity: 0.5
                     , width: "100%", height: 200, position: 'relative'
                 }}>
-
                 </div>
             </div>
-
         </div>
-
     )
 }

@@ -12,7 +12,6 @@ import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 import TextField from '@material-ui/core/TextField';
 import DeleteSweepOutlinedIcon from '@material-ui/icons/DeleteSweepOutlined';
 import CircularProgress from '@mui/material/CircularProgress';
-
 import { ScrollView } from 'react-native';
 import { useParams } from 'react-router';
 
@@ -47,11 +46,6 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 2px',
         transform: 'scale(0.8)',
     },
-
-    // title: {
-    //     fontSize: 14,
-    // },
-
     pos: {
         marginBottom: 12,
     },
@@ -76,7 +70,6 @@ const useStyles = makeStyles((theme) => ({
         border: '0.75px solid #AAAAAA',
         borderRadius: 5,
         // flexWrap: 'wrap'
-
     },
     mainFameHeader: {
         height: 150,
@@ -89,13 +82,11 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         borderRadius: '5px',
         border: '0.75px solid #AAAAAA'
-
     },
     inFameHeader: {
         width: "100%",
         height: 86.5,
         // borderBottom: '0.75px solid #AAAAAA',
-
     },
 
     title2: {
@@ -105,7 +96,6 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         top: 70.6,
         left: 42
-
     },
     title3: {
         fontSize: '16.18px',
@@ -114,7 +104,6 @@ const useStyles = makeStyles((theme) => ({
         left: 41,
         top: 13,
         position: 'absolute'
-
     },
     title4: {
         fontSize: '13px',
@@ -128,7 +117,6 @@ const useStyles = makeStyles((theme) => ({
         color: '#4A4A4A',
         position: 'absolute'
     },
-
     inputbox: {
         position: 'absolute',
         height: "31.5px",
@@ -139,9 +127,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '14.7px',
         top: 86.6,
         left: 42
-
     },
-
     rominfame: {
         width: '100%',
         height: 55,
@@ -178,9 +164,6 @@ export default function Initialize(props) {
             })
     }, [isLoading]);
 
-
-
-
     /*const [stroom, setStroom] = useState([])
       React.useEffect(() => {
         const fetchData = () =>{
@@ -206,15 +189,11 @@ export default function Initialize(props) {
       fetchData()
     }, [])*/
 
-
-
     function handlerChangeJSOn() {
         allroom[0].buildingName = "Laila"
         setKeepstate(allroom[3].floors[0].rooms)
         console.log(keepstate)
     }
-
-
     const [newArray, setNewArray] = useState([])
     const [onlyRoom, setOnlyRoom] = useState([])
 
@@ -232,19 +211,15 @@ export default function Initialize(props) {
                     "ElectricityReading": "12",
                     "WaterReading": "14"
                 }
-
             }
-
         }
         console.log("huffe" + allroom)
         setNewArray(allroom)
         setLoading(false)
-
     }
     const api = axios.create({
         baseURL: `/InitializeExpenses/initialize-expenses/`
     })
-
 
     const addWaterElec = async () => {
         console.log(finalroom)
@@ -253,7 +228,6 @@ export default function Initialize(props) {
             url: `/InitializeExpenses/initialize-expenses/`,
             method: 'post',
             data: finalroom
-
         }).then(response => {
             alert("post success")
             console.log(finalroom)
@@ -264,39 +238,11 @@ export default function Initialize(props) {
                 alert("post fail")
                 console.log('Error getting fake data: ' + error);
             })
-
-
-
-        // let res = await api.post('/',
-
-        //     finalroom
-
-        // ).then(response => {
-        //     alert("post success")
-        // })
-        // .catch(error => {
-        //     alert("post fail")
-        //     console.log('Error getting fake data: ' + error);
-        // })
     }
 
-
     const [keepstate, setKeepstate] = useState([])
-
     const [finalroom, setfinalroom] = useState()
-    // const Expensesave = event => {
-    //     event.preventDefault();
-    //     axios.post("/rentingtransaction/electricity-water-expenses",
-
-    //         keepstate
-
-    //     ).then((response) => {
-    //         console.log(response);
-    //     })
-    // };
-
-
-
+    
     function handleaddDateChange(r, e) {
         r.SetupDate = String(addDate)
         r.ElectricityReading = String(e)
@@ -315,14 +261,8 @@ export default function Initialize(props) {
             }
         }
         console.log(onlyRoom)
-
         setfinalroom(onlyRoom)
-
-
-        // await addWaterElec()
-
     }
-
 
     if (!isLoading) {
         return (
@@ -330,11 +270,8 @@ export default function Initialize(props) {
                 <ScrollView>
                     <div style={{height: 80}}/>
                     <div style={{position: 'relative', margin: 'auto', height: 700}}>
-                        {/* <button onClick={() => console.log(finalroom)}>
-                        </button> */}
                         <div>
                             <div style={{ width: '100%', height: '650px' }}>
-
                                 <div className={classes.mainFame}>
                                     <Table aria-label="caption table">
                                         <TableRow>
@@ -343,32 +280,24 @@ export default function Initialize(props) {
                                                 <div className={classes.title2}>Setup Date</div>
                                                 <br />
                                                 <input className={classes.inputbox}
- 
                                                     type="date"
                                                     data-date-format="dd/MM/yy"
-                                                    //value="2021-21-06"
                                                     onChange={e => { setAddDate(e.target.value); handlesubmit() }}
                                                 />
-
                                             </div>
                                         </TableRow>
-
                                         <div style={{ position: 'relative', height: 61.4 }}>
                                             <div className={classes.title2} style={{ position: 'absolute', top: 18.18, fontWeight: 'bold', left: 73.5 }}>
                                                 {newArray.length > 0 && newArray[0].building}
                                             </div>
                                         </div>
-
-
                                         {newArray.map((set) => {
                                             return (
                                                 <div className={classes.inFame} style={{ position: 'relative', margin: 'auto', marginBottom: 20 }}>
                                                     <div className={classes.inFameHeader}>
                                                         <div className={classes.title3} >
                                                             Floor {set.floorName}
-
                                                         </div>
-                                                        {/* display flex */}
                                                         <div style={{ display: 'flex' }}>
                                                             <div className={classes.title4} style={{ left: 41 }}>
                                                                 Room
@@ -386,15 +315,12 @@ export default function Initialize(props) {
                                                         { console.log('im here') }
                                                         return (
                                                             <div className={classes.rominfame} style={{ borderTop: '0.75px solid #AAAAAA' }}>
-                                                                {/* display flex */}
                                                                 <div style={{ display: 'flex' }}>
                                                                     <div className={classes.title5} style={{ left: 41, top: 18 }}>
                                                                         {r.roomNumber}
                                                                     </div>
-
                                                                     {/* <input className={classes.inputSize} style={{ top: 12, marginLeft: 206 }}
-                                                                        onChange={e => room.room_number = e.target.value}
-                                                                    >
+                                                                        onChange={e => room.room_number = e.target.value}>
                                                                     </input> */}
 
                                                                     <input
@@ -409,97 +335,35 @@ export default function Initialize(props) {
 
                                                                     <input
                                                                         className={classes.inputSize}
-                                                                        className={classes.inputSize}
                                                                         style={{ top: 12 }}
-
                                                                         onChange={e => handleaddDateChange2(r, e.target.value)}
                                                                     />
                                                                 </div>
                                                             </div>
                                                         )
                                                     })}
-
                                                 </div>
-
                                             )
                                         })}
-                                        {/* <TableBody> */}
-
-                                        {/* <div className="container">
-                                                {newArray.map((set) => {
-                                                    return (
-                                                        <div className={classes.inFame} variant="outlined">
-                                                            <div className={classes.inFameHeader}>
-                                                                {set.FloorName}
-                                                            <Table>
-                                                                    <div className={classes.inFameHeader}>
-                                                                        Floor {set.floorName}
-                                                                        
-                                                                    <TableRow>
-                                                                        <TableCell>Rooms</TableCell>
-                                                                        <TableCell align="center">Electricity Reading</TableCell>
-                                                                        <TableCell align="center">Water Reading</TableCell>
-                                                                    </TableRow>
-                                                                        </div>
-                                                                {set.room.map((r) => {
-                                                                    return (
-                                                                        <TableBody>
-                                                                            <TableRow>
-                                                                                <TableCell align="left">{r.roomNumber}</TableCell>
-                                                                                <TableCell align="center">
-                                                                                    <input
-                                                                                        size="small"
-                                                                                        variant="outlined"
-                                                                                        onChange={e => handleaddDateChange(r, e.target.value)}
-                                                                                    />
-                                                                                </TableCell>
-                                                                                <TableCell align="center">
-                                                                                    <input
-                                                                                        size="small"
-                                                                                        variant="outlined"
-                                                                                        onChange={e => handleaddDateChange2(r, e.target.value)}
-                                                                                    />
-                                                                                </TableCell>
-                                                                            </TableRow>
-                                                                        </TableBody>
-                                                                    )
-                                                                })}
-                                                            </Table>
-                                                            </div>
-                                                        </div>
-                                                    )
-                                                })}
-                                            </div> */}
-
-                                        {/* </TableBody> */}
-
                                     </Table>
-                                    <div style={{ height: 50 }}>
-
-                                    </div>
+                                    <div style={{ height: 50 }}></div>
                                 </div>
-
-                                <div style={{ height: 200 }}>
-                                </div>
+                                <div style={{ height: 200 }}></div>
                             </div>
                         </div>
                     </div>
                 </ScrollView>
                 <div style={{ position: 'absolute', width: '100%', bottom: 10 }}>
-                    {/* <Link to='/feetype_sp' style={{ textDecoration: "none" }}> */}
                     <Button style={{
                         backgroundColor: "#485D84",
                         width: 406, height: 42.87, color: "#FFFFFF",
                         fontSize: 21, zIndex: 1,
                         position: 'absolute', left: 610, top: 25
                     }}
-                        // onClick={() => handlesubmit()}
                         onClick={addWaterElec}
                     >
                         SAVE
                     </Button>
-                    {/* </Link > */}
-
                     <div
                         style={{
                             backgroundColor: '#385CA8',
