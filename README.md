@@ -11,24 +11,25 @@ There are many students complain about price, services, and management system of
 
 ## 💎 Features Example :
 
-Dashboard 
+## Dashboard 
 Dashboards is feedback to report to the owner of the university dormitory. Moreover, it can be referencing the trend to improve any services or promote to have more tenants.
 
 ![Dashboard](https://user-images.githubusercontent.com/74519762/154226706-4e121fe6-f986-49f9-8bf2-eecdbfe9b8db.png)
 
-Room Management
+## Room Management
 Assign the student to be tenant. After the staff save the information of students, the system will send all necessary information via their email. For example, the room number, username, and password
 
 ![Roommanagement](https://user-images.githubusercontent.com/74519762/151739449-dd493636-3f00-404b-a41e-d8e5287931e7.png)
 
-Announcement
+## Announcement
 Announcement is significant to get news.shows how to create the announcement on the application. From the old system, the staff must post on the Facebook page that  some students cannot see the post. It made the students miss the important news such as power cut, practicing escaping the fire
  
 ![Announcement](https://user-images.githubusercontent.com/74519762/151741387-ca11bb38-2b0d-476f-bf9b-2bdf7e17db59.png)
 
-Pettition
+## Pettition
 ![Petition](https://user-images.githubusercontent.com/74519762/166903786-65af1861-3346-4438-a3f7-739ae23a903f.png)
 
-
+## Calculate Expense
+![Verify](https://user-images.githubusercontent.com/74519762/166904469-142d9c23-8ae1-400e-86aa-bb3538ce710f.png)
 
 
