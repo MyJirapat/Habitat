@@ -6,6 +6,8 @@ Habitat is a dormitory of university on campus application built on 2 platforms 
 ## Motivation
 There are many students complain about price, services, and management system of the dormitory on campus. We try to help to solve those problems by developing Habitat project. The staff manages the dormitory manually and uses paper-based system to record or check documents about expenses, room, and students as well and students who stay in dormitory cannot check the bill properly.
 
+## 🗃️ Problem Statement: 
+Dormitory of Assumption University is one of choices which Assumption University students chose to stay because it is in the university as conveniently come studying in the university. Also, the university has several facilities providing for the students to use. For example, study room, sport centre, library, etc. There are 3 buildings to manage: King Solomon, King David, and Queen of Sheba. Almost all managers must manage onsite manually which makes them work harder and more paperwork. They sometimes got mistakes to calculate expenses or keep their documents that about bill. They must send tenants bill manually. There are also no data record clearly especially, the record of expenses, number of all rooms in each building, and income statement which the manager should see all of time
 
 ## 💎 Features :
 * provide an easy way of helping staff to manage dormitory such as create buildings, floors, rooms, fees, and set initial meter reading in system for beginning. 
