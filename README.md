@@ -3,6 +3,7 @@ Habitat is a dormitory of university on campus application built on 2 platforms 
 
 ![Setting-image](https://user-images.githubusercontent.com/74519762/151738970-a868beb6-8225-42d4-8183-dc2545e09d22.png)
 
+## 💎 Features :
 # Dashboard 
 ![Dashboard](https://user-images.githubusercontent.com/74519762/154226706-4e121fe6-f986-49f9-8bf2-eecdbfe9b8db.png)
 
