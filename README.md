@@ -1,7 +1,7 @@
 ## Habitat 
 Habitat is a dormitory of university on campus application built on 2 platforms are an iOS that focuses on expenses in each student, news, and alternative bank payment for students. Another platform is a web application platform for managing system to check any expenses, manage each room in dormitory in each building, and also, petition to collect any problems of students such as some room make too noise, the students can report on the petition feature.
 
-![Setting-image](https://user-images.githubusercontent.com/74519762/151738970-a868beb6-8225-42d4-8183-dc2545e09d22.png)
+![Inkedmaxresdefault_LI](https://user-images.githubusercontent.com/74519762/166905340-20a8d08a-22a6-4434-99f8-537bfc8dc6fc.jpg)
 
 ## 🗃️ Problem Statement: 
 Dormitory of Assumption University is one of choices which Assumption University students chose to stay because it is in the university as conveniently come studying in the university. Also, the university has several facilities providing for the students to use. For example, study room, sport centre, library, etc. There are 3 buildings to manage: King Solomon, King David, and Queen of Sheba. Almost all managers must manage onsite manually which makes them work harder and more paperwork. They sometimes got mistakes to calculate expenses or keep their documents that about bill. They must send tenants bill manually. There are also no data record clearly especially, the record of expenses, number of all rooms in each building, and income statement which the manager should see all of time.
@@ -10,6 +10,9 @@ Dormitory of Assumption University is one of choices which Assumption University
 There are many students complain about price, services, and management system of the dormitory on campus. We try to help to solve those problems by developing Habitat project. The staff manages the dormitory manually and uses paper-based system to record or check documents about expenses, room, and students as well and students who stay in dormitory cannot check the bill properly.
 
 ## 💎 Features Example :
+
+## Setting
+![Setting-image](https://user-images.githubusercontent.com/74519762/151738970-a868beb6-8225-42d4-8183-dc2545e09d22.png)
 
 ## Dashboard 
 Dashboards is feedback to report to the owner of the university dormitory. Moreover, it can be referencing the trend to improve any services or promote to have more tenants.
