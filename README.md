@@ -20,7 +20,7 @@ There are many students complain about price, services, and management system of
 ![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/74519762/177474167-543ff28f-7cf4-4866-8120-57225626761b.png)
 
 ## Bed Room 
-![ADD_1657085385638](https://user-images.githubusercontent.com/74519762/177475991-52b35fbf-4bb2-4fe8-a5b0-1bd1942f0d76.jpg)
+![A](https://user-images.githubusercontent.com/74519762/177476134-a039e21b-90bb-4e60-84c4-4c19bb1c1528.PNG)
 
 
 ## Dashboard 
