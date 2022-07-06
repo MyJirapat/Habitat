@@ -19,19 +19,18 @@ There are many students complain about price, services, and management system of
 ## Building
 ![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/74519762/177474167-543ff28f-7cf4-4866-8120-57225626761b.png)
 
+## Room Management
+Assign the student to be tenant. After the staff save the information of students, the system will send all necessary information via their email. For example, the room number, username, and password
+
+![Roommanagement](https://user-images.githubusercontent.com/74519762/151739449-dd493636-3f00-404b-a41e-d8e5287931e7.png)
+
 ## Bed Room 
 ![A](https://user-images.githubusercontent.com/74519762/177476134-a039e21b-90bb-4e60-84c4-4c19bb1c1528.PNG)
-
 
 ## Dashboard 
 Dashboards is feedback to report to the owner of the university dormitory. Moreover, it can be referencing the trend to improve any services or promote to have more tenants.
 
 ![Dashboard](https://user-images.githubusercontent.com/74519762/154226706-4e121fe6-f986-49f9-8bf2-eecdbfe9b8db.png)
-
-## Room Management
-Assign the student to be tenant. After the staff save the information of students, the system will send all necessary information via their email. For example, the room number, username, and password
-
-![Roommanagement](https://user-images.githubusercontent.com/74519762/151739449-dd493636-3f00-404b-a41e-d8e5287931e7.png)
 
 ## Announcement
 Announcement is significant to get news.shows how to create the announcement on the application. From the old system, the staff must post on the Facebook page that  some students cannot see the post. It made the students miss the important news such as power cut, practicing escaping the fire
