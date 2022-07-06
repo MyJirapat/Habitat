@@ -25,7 +25,8 @@ Assign the student to be tenant. After the staff save the information of student
 ![Roommanagement](https://user-images.githubusercontent.com/74519762/151739449-dd493636-3f00-404b-a41e-d8e5287931e7.png)
 
 ## Bed Room 
-![A](https://user-images.githubusercontent.com/74519762/177476134-a039e21b-90bb-4e60-84c4-4c19bb1c1528.PNG)
+![1657085954495](https://user-images.githubusercontent.com/74519762/177476784-7812272d-117f-47d9-88ff-f9c9c90a1cad.jpg)
+
 
 ## Dashboard 
 Dashboards is feedback to report to the owner of the university dormitory. Moreover, it can be referencing the trend to improve any services or promote to have more tenants.
