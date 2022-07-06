@@ -16,6 +16,9 @@ There are many students complain about price, services, and management system of
 ## Setting
 ![Setting-image](https://user-images.githubusercontent.com/74519762/151738970-a868beb6-8225-42d4-8183-dc2545e09d22.png)
 
+## Building
+![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/74519762/177474167-543ff28f-7cf4-4866-8120-57225626761b.png)
+
 ## Dashboard 
 Dashboards is feedback to report to the owner of the university dormitory. Moreover, it can be referencing the trend to improve any services or promote to have more tenants.
 
