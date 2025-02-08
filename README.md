@@ -10,7 +10,7 @@ The dormitory at Assumption University is one of the preferred choices for stude
 
 There are three dormitory buildings: King Solomon, King David, and Queen of Sheba. Currently, dormitory management is handled manually, requiring onsite supervision, which increases the workload and paperwork for managers. This manual process often leads to errors in expense calculations and document management, particularly in billing. Tenant bills must be sent manually, and there is no centralized system for maintaining clear records of expenses, the total number of rooms in each building, or financial statements. These records are crucial for effective management, and having real-time access to them would greatly improve operational efficiency.
 ## 📈 Objective
-There are many students complain about price, services, and management system of the dormitory on campus. We try to help to solve those problems by developing Habitat project. The staff manages the dormitory manually and uses paper-based system to record or check documents about expenses, room, and students as well and students who stay in dormitory cannot check the bill properly.
+Many students have expressed concerns about the price, services, and management system of the on-campus dormitory. To address these issues, we are developing the Habitat project. Currently, dormitory staff manage operations manually, relying on a paper-based system to record and verify documents related to expenses, rooms, and student accommodations. As a result, students residing in the dormitory often face difficulties in accurately checking their bills.
 
 ## 💎 Features Example :
 
