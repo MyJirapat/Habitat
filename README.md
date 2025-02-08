@@ -1,5 +1,5 @@
 # Habitat 
-Habitat is a dormitory of university on campus application built on 2 platforms are an iOS that focuses on expenses in each student, news, and alternative bank payment for students. Another platform is a web application platform for managing system to check any expenses, manage each room in dormitory in each building, and also, petition to collect any problems of students such as some room make too noise, the students can report on the petition feature.
+Habitat is an on-campus dormitory management application available on two platforms. The iOS application focuses on tracking individual student expenses, providing university news, and offering alternative bank payment options for students. The web application serves as a management system, allowing staff to monitor expenses, manage dormitory rooms across different buildings, and address student concerns. Additionally, the petition feature enables students to report issues, such as excessive noise from certain rooms, for prompt resolution.
 
  Demo: https://www.youtube.com/watch?v=nnCw-ifRU1o&feature=youtu.be
 
